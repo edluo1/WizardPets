@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://dupxxjsd5fuln"]
+[gd_scene load_steps=2 format=3 uid="uid://dupxxjsd5fuln"]
+
+[ext_resource type="Script" path="res://scripts/displays/MainScene.gd" id="1_ksh1o"]
 
 [node name="MainScene" type="Control"]
 layout_mode = 3
@@ -7,6 +9,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ksh1o")
 
 [node name="HUD" type="Control" parent="."]
 anchors_preset = 0
@@ -28,3 +31,5 @@ offset_top = 200.0
 offset_right = 100.0
 offset_bottom = 250.0
 text = "Test Button"
+
+[connection signal="pressed" from="Menu/Button" to="." method="_on_button_pressed"]

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://doaap68ori6su"]
+
+[ext_resource type="Texture2D" uid="uid://ddd33rsu4bbms" path="res://assets/game_maps/forest_concept.jpg" id="1_f0t64"]
+
+[node name="pet_collection_scene_1" type="Node2D"]
+
+[node name="ForestConcept" type="Sprite2D" parent="."]
+position = Vector2(537, 337)
+texture = ExtResource("1_f0t64")

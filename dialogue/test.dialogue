@@ -1,0 +1,13 @@
+~ start
+
+Customer: Give me the duck.
+- Give the duck
+	Customer: Thanks for the duck. 
+	=> END
+- Don't give the duck
+	Customer: what why 
+	=> start
+- Start again => start
+- End the conversation => END
+
+=> END

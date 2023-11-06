@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dupxxjsd5fuln"]
+[gd_scene load_steps=3 format=3 uid="uid://dupxxjsd5fuln"]
 
 [ext_resource type="Script" path="res://scripts/displays/MainScene.gd" id="1_ksh1o"]
+[ext_resource type="Script" path="res://scenes/displays/Menu.cs" id="2_hocj7"]
 
 [node name="MainScene" type="Control"]
 layout_mode = 3
@@ -20,6 +21,7 @@ offset_bottom = 40.0
 anchors_preset = 0
 offset_right = 1152.0
 offset_bottom = 648.0
+script = ExtResource("2_hocj7")
 
 [node name="Button" type="Button" parent="Menu"]
 layout_mode = 1
@@ -30,6 +32,18 @@ offset_left = -100.0
 offset_top = 200.0
 offset_right = 100.0
 offset_bottom = 250.0
-text = "Test Button"
+text = "Test Button (GDScript)"
+
+[node name="csbutton" type="Button" parent="Menu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -102.0
+offset_top = 291.0
+offset_right = 98.0
+offset_bottom = 341.0
+text = "Test Button (C#)"
 
 [connection signal="pressed" from="Menu/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Menu/csbutton" to="Menu" method="_on_csbutton_pressed"]

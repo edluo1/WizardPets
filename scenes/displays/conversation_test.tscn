@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://dnjfyesuo5iul"]
+
+[node name="conversation_test" type="Node2D"]
+
+[node name="Customer" type="CharacterBody2D" parent="."]

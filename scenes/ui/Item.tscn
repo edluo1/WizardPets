@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://d4cdnnww2whxi"]
+
+[ext_resource type="Texture2D" uid="uid://bl5toh6ewlo4i" path="res://assets/items/apple_placeholder.png" id="1_s1li7"]
+
+[node name="Item" type="Node2D"]
+z_index = 1
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+texture = ExtResource("1_s1li7")

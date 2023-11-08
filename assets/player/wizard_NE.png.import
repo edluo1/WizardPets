@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddd33rsu4bbms"
-path.s3tc="res://.godot/imported/forest_concept.jpg-b06dab5e8662160f55c2a6ed614812ea.s3tc.ctex"
+uid="uid://bk0orn1x7q28p"
+path.s3tc="res://.godot/imported/wizard_NE.png-d1bf69f3b125a20c347e022003a59083.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/game_maps/forest_concept.jpg"
-dest_files=["res://.godot/imported/forest_concept.jpg-b06dab5e8662160f55c2a6ed614812ea.s3tc.ctex"]
+source_file="res://assets/player/wizard_NE.png"
+dest_files=["res://.godot/imported/wizard_NE.png-d1bf69f3b125a20c347e022003a59083.s3tc.ctex"]
 
 [params]
 

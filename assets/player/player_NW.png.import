@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddd33rsu4bbms"
-path.s3tc="res://.godot/imported/forest_concept.jpg-b06dab5e8662160f55c2a6ed614812ea.s3tc.ctex"
+uid="uid://bpnbvs24yuaje"
+path.s3tc="res://.godot/imported/player_NW.png-e336d414a1129a8aca758e64d1b57b8a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/game_maps/forest_concept.jpg"
-dest_files=["res://.godot/imported/forest_concept.jpg-b06dab5e8662160f55c2a6ed614812ea.s3tc.ctex"]
+source_file="res://assets/player/player_NW.png"
+dest_files=["res://.godot/imported/player_NW.png-e336d414a1129a8aca758e64d1b57b8a.s3tc.ctex"]
 
 [params]
 

@@ -1,0 +1,41 @@
+[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://nqs8vnoes28s"]
+
+[ext_resource type="Texture2D" uid="uid://bk0orn1x7q28p" path="res://assets/player/wizard_NE.png" id="1_cwqlt"]
+[ext_resource type="Texture2D" uid="uid://beuiqr3l7hjyr" path="res://assets/player/wizard_NW.png" id="2_73e1s"]
+[ext_resource type="Texture2D" uid="uid://dfmna2dp24vrw" path="res://assets/player/wizard_SE.png" id="3_qb86t"]
+[ext_resource type="Texture2D" uid="uid://bolhbsnhvwute" path="res://assets/player/wizard_SW.png" id="4_uv1ba"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_cwqlt")
+}],
+"loop": true,
+"name": &"NE",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_73e1s")
+}],
+"loop": true,
+"name": &"NW",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_qb86t")
+}],
+"loop": true,
+"name": &"SE",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_uv1ba")
+}],
+"loop": true,
+"name": &"SW",
+"speed": 5.0
+}]

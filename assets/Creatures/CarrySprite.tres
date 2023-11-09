@@ -1,0 +1,77 @@
+[gd_resource type="SpriteFrames" load_steps=9 format=3 uid="uid://dfccfh56mo0na"]
+
+[ext_resource type="Texture2D" uid="uid://cjvx54x7dnjm5" path="res://assets/Creatures/angel/small.png" id="1_uyl1u"]
+[ext_resource type="Texture2D" uid="uid://b8rrr6c6omnbs" path="res://assets/Creatures/buggi/small.png" id="2_x5v20"]
+[ext_resource type="Texture2D" uid="uid://bte71olqw8v14" path="res://assets/Creatures/dandi/small.png" id="3_aw7of"]
+[ext_resource type="Texture2D" uid="uid://cy2uq5mug5584" path="res://assets/Creatures/fairy/small.png" id="4_n3j6u"]
+[ext_resource type="Texture2D" uid="uid://cu73gujxvq508" path="res://assets/Creatures/plushbie/small.png" id="5_phwq8"]
+[ext_resource type="Texture2D" uid="uid://dd7bi35e0hwkl" path="res://assets/Creatures/shroop/small.png" id="6_dumks"]
+[ext_resource type="Texture2D" uid="uid://cuokah538asc0" path="res://assets/Creatures/shrump/small.png" id="7_saybb"]
+[ext_resource type="Texture2D" uid="uid://c2c7rpfaojtic" path="res://assets/Creatures/thang/small.png" id="8_m68t4"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_uyl1u")
+}],
+"loop": true,
+"name": &"angel",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_x5v20")
+}],
+"loop": true,
+"name": &"buggi",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_aw7of")
+}],
+"loop": true,
+"name": &"dandi",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_n3j6u")
+}],
+"loop": true,
+"name": &"fairy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_phwq8")
+}],
+"loop": true,
+"name": &"plushbie",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_dumks")
+}],
+"loop": true,
+"name": &"shroop",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_saybb")
+}],
+"loop": true,
+"name": &"shrump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_m68t4")
+}],
+"loop": true,
+"name": &"thang",
+"speed": 5.0
+}]

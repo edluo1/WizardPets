@@ -49,13 +49,12 @@ _data = {
 
 [node name="Wizard" type="CharacterBody3D"]
 script = ExtResource("1_5kdkn")
-metadata/useBackpack = false
 
 [node name="Sprite_Base" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0)
 
 [node name="Camera_Target" type="Node3D" parent="Sprite_Base"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 4)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 6)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite_Base"]
 libraries = {
@@ -68,7 +67,7 @@ transform = Transform3D(1, 0, 0, 0, 1.00296, 0, 0, 0, 1, 0, 0.50148, 0)
 [node name="WizardSprite" type="AnimatedSprite3D" parent="Sprite_Base/SpriteHolder"]
 transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, 0, 0, 0)
 sprite_frames = ExtResource("2_wonjj")
-animation = &"SW"
+animation = &"SW_BP"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.25, 0)

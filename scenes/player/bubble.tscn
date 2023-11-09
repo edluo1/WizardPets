@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=3 uid="uid://cmjowgurgbfp7"]
+
+[ext_resource type="Script" path="res://scripts/player/bubble.gd" id="1_feh8i"]
+[ext_resource type="Texture2D" uid="uid://btum7s6qw0e7n" path="res://assets/player/bubble.png" id="1_xo6jk"]
+[ext_resource type="SpriteFrames" uid="uid://dfccfh56mo0na" path="res://assets/Creatures/CarrySprite.tres" id="3_nb76m"]
+
+[sub_resource type="Animation" id="Animation_do4nc"]
+resource_name = "Float"
+length = 2.0
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpriteHolder")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0.75, 0, 1, 1, 0, 0.5, 0, 2, 1, 0, 0.75, 0)
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpriteHolder/SpriteCreature:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 1, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 1.5708), Vector3(0, 0, 3.14159), Vector3(0, 0, 4.71239), Vector3(0, 0, 6.28319)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_433f5"]
+_data = {
+"Float": SubResource("Animation_do4nc")
+}
+
+[node name="Bubble_Base" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0)
+script = ExtResource("1_feh8i")
+tether = 1.0
+maxSpeed = 5.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_433f5")
+}
+
+[node name="SpriteHolder" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1.01, 0, 0, 0, 1, 0, 0.75, 0)
+
+[node name="SpriteBubble" type="Sprite3D" parent="SpriteHolder"]
+transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 0, 0, 0)
+texture = ExtResource("1_xo6jk")
+
+[node name="SpriteCreature" type="AnimatedSprite3D" parent="SpriteHolder"]
+transform = Transform3D(0.12, 0, 0, 0, 0.12, 0, 0, 0, 0.12, 0, 0.02, 0)
+sorting_offset = -0.5
+sprite_frames = ExtResource("3_nb76m")
+animation = &"shrump"

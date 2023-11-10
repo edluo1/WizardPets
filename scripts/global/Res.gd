@@ -1,6 +1,9 @@
+class_name Res
 extends Object
-enum resID
+enum ID
 {
+	empty,
+	#Pets
 	fairy,
 	shroom,
 	
@@ -21,8 +24,8 @@ enum resID
 	tea,
 	
 	
+	#Items
 	lettuce,
 	meat,
 	honey,
 }
-

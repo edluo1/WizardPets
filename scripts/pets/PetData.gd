@@ -1,12 +1,12 @@
-extends Node
+extends Object
 # Should be the base class for all pets.
-class_name Pet
-
-var health: int = 100
-var strength: int = 10
-var kindness: int = 10
-var cuteness: int = 10
-var mood: int = 50
+class_name PetData
+@export var ID: Res.ID = Res.ID.empty
+@export var health: int = 100
+@export var strength: int = 10
+@export var kindness: int = 10
+@export var cuteness: int = 10
+@export var mood: int = 50
 
 func feed_strength_food(value: int) -> void:
 	strength += value

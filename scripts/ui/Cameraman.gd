@@ -6,11 +6,9 @@ const MIN_SPEED = 0.1
 const ACCEL = 3.0
 @export var target: Node3D
 
-func _ready():
+func _physics_process(delta):
 	if target.name != "Camera_Target":
 		target = target.find_child("Camera_Target")
-
-func _physics_process(delta):
 	var direction = target.global_position - global_position
 	var speed = min(direction.length_squared(), MAX_SPEED)
 	

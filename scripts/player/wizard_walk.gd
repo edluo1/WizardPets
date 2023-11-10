@@ -4,9 +4,9 @@ extends CharacterBody3D
 @onready var wizardSprite = $Sprite_Base/SpriteHolder/WizardSprite
 var northbound = false
 var eastbound = true
-@export var hasBackpack : bool
+@export var hasBackpack: bool
 @export var SPEED = 2.5
-
+@export var bubbles: Array[BubbleSprite]
 func _ready():
 	print("wizard loaded")
 

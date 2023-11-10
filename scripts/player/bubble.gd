@@ -1,3 +1,5 @@
+class_name BubbleSprite
+
 extends Node3D
 
 @export var target: Node3D

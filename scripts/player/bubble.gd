@@ -8,12 +8,6 @@ extends Node3D
 
 @onready var creatureSprite = $SpriteHolder/SpriteCreature
 
-enum Pet
-{
-	empty,
-	thang
-}
-
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	$AnimationPlayer.play("Float")
@@ -31,8 +25,8 @@ func _process(delta):
 		else:
 			global_position += direction
 
-func SetContents(pet: Pet):
-	visible = pet != Pet.empty
+func SetContents(pet: Res.ID):
+	visible = pet != Res.ID.empty
 	match pet:
-		Pet.thang:
+		Res.ID.thang:
 			creatureSprite.play("thang")

@@ -7,6 +7,14 @@ class_name PetData
 @export var kindness: int = 10
 @export var cuteness: int = 10
 @export var mood: int = 50
+enum Food{lettuce, meat, honey, nothing}
+@export var diet: Food
+enum MoveStyle{skitter, bounce, fly}
+@export var movement: MoveStyle
+enum ReactionStyle{terrified, cautious, uncaring}
+@export var reaction: ReactionStyle
+@export var eatX: int = 0
+@export var eatY: int = 0
 
 func feed_strength_food(value: int) -> void:
 	strength += value

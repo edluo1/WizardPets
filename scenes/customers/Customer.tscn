@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://chogjrfwfls81"]
+[gd_scene load_steps=7 format=3 uid="uid://chogjrfwfls81"]
 
+[ext_resource type="Script" path="res://scripts/customers/Customer.gd" id="1_g7v22"]
 [ext_resource type="SpriteFrames" uid="uid://5bv0gypd845q" path="res://assets/customers/customer_frames.tres" id="1_wtn64"]
 
 [sub_resource type="Animation" id="Animation_do4nc"]
@@ -47,6 +48,7 @@ _data = {
 [sub_resource type="BoxShape3D" id="BoxShape3D_unjec"]
 
 [node name="Customer" type="CharacterBody3D"]
+script = ExtResource("1_g7v22")
 
 [node name="Sprite_Base" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0)

@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://ccs2iedwnoqsr"]
+[gd_scene load_steps=5 format=3 uid="uid://ccs2iedwnoqsr"]
 
 [ext_resource type="PackedScene" uid="uid://chogjrfwfls81" path="res://scenes/customers/Customer.tscn" id="1_6hkjf"]
 [ext_resource type="PackedScene" uid="uid://d4m8xa02kg0d3" path="res://scenes/player/wizard_walk.tscn" id="2_hxhps"]
 [ext_resource type="Texture2D" uid="uid://ddd33rsu4bbms" path="res://assets/game_maps/forest_concept.jpg" id="3_xge0d"]
+[ext_resource type="PackedScene" uid="uid://bhg1xpq75a4kv" path="res://scenes/ui/Cameraman.tscn" id="4_5whr0"]
 
 [node name="shop_purchase" type="Node3D"]
 
@@ -16,3 +17,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0.375135, 0.162537)
 transform = Transform3D(6, 0, 0, 0, 7.15493e-08, 6, 0, -6, 7.15493e-08, -5.41403, -0.00285387, -1.45909)
 sorting_offset = -10.0
 texture = ExtResource("3_xge0d")
+
+[node name="Cameraman" parent="." node_paths=PackedStringArray("target") instance=ExtResource("4_5whr0")]
+target = NodePath("../Wizard")

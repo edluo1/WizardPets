@@ -1,12 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://bonhovjbufpck"]
+[gd_scene load_steps=7 format=3 uid="uid://bonhovjbufpck"]
 
-[ext_resource type="Texture2D" uid="uid://bv2m6q5wq27ru" path="res://assets/ui/inventory_background.png" id="1_dkf2m"]
 [ext_resource type="Script" path="res://scripts/ui/Inventory.gd" id="1_hjrgg"]
-[ext_resource type="Texture2D" uid="uid://dgv1dsryielbx" path="res://assets/ui/inventory_slot.png" id="2_1phys"]
+[ext_resource type="Texture2D" uid="uid://rnwjatd7msna" path="res://assets/ui/item_bag/000.png" id="2_gj275"]
+[ext_resource type="Texture2D" uid="uid://ckrih76frma52" path="res://assets/ui/item_bag/002.png" id="3_f207p"]
 [ext_resource type="Script" path="res://scripts/ui/Slot.gd" id="3_m41kx"]
+[ext_resource type="Texture2D" uid="uid://cyirw0b8ap2ir" path="res://assets/ui/item_bag/001.png" id="4_m4eqd"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dthlo"]
-texture = ExtResource("2_1phys")
+texture = ExtResource("4_m4eqd")
 
 [node name="Inventory" type="Control"]
 layout_mode = 3
@@ -19,78 +20,62 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_hjrgg")
 
-[node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 0
-offset_right = 1280.0
-offset_bottom = 720.0
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_dkf2m")
+[node name="InventoryUI" type="CanvasLayer" parent="."]
 
-[node name="GridContainer" type="GridContainer" parent="."]
-layout_mode = 0
-offset_left = 12.0
-offset_top = 52.0
-offset_right = 637.0
-offset_bottom = 352.0
+[node name="BackpackRect" type="TextureRect" parent="InventoryUI"]
+z_index = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -248.0
+offset_right = 1092.0
+offset_bottom = 994.0
+grow_vertical = 0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_gj275")
+stretch_mode = 2
+
+[node name="InventoryBackground" type="TextureRect" parent="InventoryUI"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 174.0
+offset_top = -106.0
+offset_right = 1499.0
+offset_bottom = 160.0
+grow_vertical = 0
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("3_f207p")
+stretch_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="InventoryUI"]
+offset_left = 220.0
+offset_top = 545.0
+offset_right = 845.0
+offset_bottom = 645.0
 theme_override_constants/h_separation = 10
 theme_override_constants/v_separation = 10
 columns = 5
 
-[node name="Slot1" type="Panel" parent="GridContainer"]
+[node name="Slot1" type="Panel" parent="InventoryUI/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_dthlo")
 script = ExtResource("3_m41kx")
 
-[node name="Slot2" type="Panel" parent="GridContainer"]
+[node name="Slot2" type="Panel" parent="InventoryUI/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_dthlo")
 script = ExtResource("3_m41kx")
 
-[node name="Slot3" type="Panel" parent="GridContainer"]
+[node name="Slot3" type="Panel" parent="InventoryUI/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_dthlo")
 script = ExtResource("3_m41kx")
 
-[node name="Slot4" type="Panel" parent="GridContainer"]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_dthlo")
-script = ExtResource("3_m41kx")
-
-[node name="Slot5" type="Panel" parent="GridContainer"]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_dthlo")
-script = ExtResource("3_m41kx")
-
-[node name="Slot6" type="Panel" parent="GridContainer"]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_dthlo")
-script = ExtResource("3_m41kx")
-
-[node name="Slot7" type="Panel" parent="GridContainer"]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_dthlo")
-script = ExtResource("3_m41kx")
-
-[node name="Slot8" type="Panel" parent="GridContainer"]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_dthlo")
-script = ExtResource("3_m41kx")
-
-[node name="Slot9" type="Panel" parent="GridContainer"]
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxTexture_dthlo")
-script = ExtResource("3_m41kx")
-
-[node name="Slot10" type="Panel" parent="GridContainer"]
+[node name="Slot4" type="Panel" parent="InventoryUI/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_dthlo")

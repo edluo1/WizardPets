@@ -11,8 +11,10 @@ enum Food{lettuce, meat, honey, nothing}
 @export var diet: Food
 enum MoveStyle{skitter, bounce, fly}
 @export var movement: MoveStyle
-enum ReactionStyle{terrified, cautious, uncaring}
+enum ReactionStyle{skittish, cautious, passive}
 @export var reaction: ReactionStyle
+enum AnimationStyle{cryOnly, backnforth}
+@export var animation: AnimationStyle
 @export var eatX: int = 0
 @export var eatY: int = 0
 

@@ -6,26 +6,27 @@ enum ID
 	#Pets
 	fairy,
 	shroom,
-	
-	
-	
+	bear,
+	moss,
+	guard,
 	buggi,
 	dandi,
-	
-	
-	
+	lizard,
+	sand,
+	spider,
 	thang,
 	shrump,
-	
-	
-	
+	eyes,
+	jelly,
+	doll,
 	angel,
 	plushbie,
 	tea,
-	
-	
+	sheep,
+	strings,
 	#Items
 	lettuce,
 	meat,
 	honey,
+	trap
 }

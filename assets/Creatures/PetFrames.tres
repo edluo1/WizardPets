@@ -1,0 +1,545 @@
+[gd_resource type="SpriteFrames" load_steps=61 format=3 uid="uid://bbl5mot0w2jtg"]
+
+[ext_resource type="Texture2D" uid="uid://btq54ip5u4wca" path="res://assets/Creatures/angel/000.png" id="1_m5w7u"]
+[ext_resource type="Texture2D" uid="uid://duyq5eujenmqd" path="res://assets/Creatures/angel/001.png" id="2_8pwxr"]
+[ext_resource type="Texture2D" uid="uid://0cil0ly7tiy" path="res://assets/Creatures/angel/002.png" id="3_k1jv3"]
+[ext_resource type="Texture2D" uid="uid://d1rhxvahp0yko" path="res://assets/Creatures/bear/000.png" id="4_fprud"]
+[ext_resource type="Texture2D" uid="uid://mkf5s1k2x7jn" path="res://assets/Creatures/buggi/000.png" id="4_mahan"]
+[ext_resource type="Texture2D" uid="uid://bflglis83d62w" path="res://assets/Creatures/buggi/001.png" id="5_7iptj"]
+[ext_resource type="Texture2D" uid="uid://idrwkntoi8r7" path="res://assets/Creatures/bear/001.png" id="5_n3cw8"]
+[ext_resource type="Texture2D" uid="uid://dnr8qwr74d2ou" path="res://assets/Creatures/bear/002.png" id="6_801tx"]
+[ext_resource type="Texture2D" uid="uid://dsx4h1ehoyr4y" path="res://assets/Creatures/buggi/002.png" id="6_kvnom"]
+[ext_resource type="Texture2D" uid="uid://cd53mtkpysvtd" path="res://assets/Creatures/thang/000.png" id="7_c1unk"]
+[ext_resource type="Texture2D" uid="uid://dcqxcbg1mq3a6" path="res://assets/Creatures/thang/001.png" id="8_iebaf"]
+[ext_resource type="Texture2D" uid="uid://cxuhnryuih65s" path="res://assets/Creatures/thang/002.png" id="9_y8nqg"]
+[ext_resource type="Texture2D" uid="uid://gd2v30deuojt" path="res://assets/Creatures/dandi/000.png" id="10_k1hg7"]
+[ext_resource type="Texture2D" uid="uid://ctnxd7n8odfsy" path="res://assets/Creatures/dandi/001.png" id="11_j5epe"]
+[ext_resource type="Texture2D" uid="uid://cjhk2vn8efay6" path="res://assets/Creatures/dandi/002.png" id="12_77t4i"]
+[ext_resource type="Texture2D" uid="uid://3p658mb2wa4d" path="res://assets/Creatures/doll/000.png" id="13_pj3tv"]
+[ext_resource type="Texture2D" uid="uid://lllav2mvh2re" path="res://assets/Creatures/doll/001.png" id="14_einus"]
+[ext_resource type="Texture2D" uid="uid://dwu8sqig8s13a" path="res://assets/Creatures/doll/002.png" id="15_ljor3"]
+[ext_resource type="Texture2D" uid="uid://dwyej8ucm3225" path="res://assets/Creatures/eyes/000.png" id="16_mtgom"]
+[ext_resource type="Texture2D" uid="uid://c8jxak76d68ny" path="res://assets/Creatures/eyes/001.png" id="17_ahcfe"]
+[ext_resource type="Texture2D" uid="uid://bcpfcq83s8evk" path="res://assets/Creatures/eyes/002.png" id="18_5dfee"]
+[ext_resource type="Texture2D" uid="uid://ce44e3nkk0jqn" path="res://assets/Creatures/fairy/000.png" id="19_lb2o0"]
+[ext_resource type="Texture2D" uid="uid://b3koy8x5713d0" path="res://assets/Creatures/fairy/001.png" id="20_5umb3"]
+[ext_resource type="Texture2D" uid="uid://bjfhlqm18gnay" path="res://assets/Creatures/fairy/002.png" id="21_ak77n"]
+[ext_resource type="Texture2D" uid="uid://cdyrky5l0u5qw" path="res://assets/Creatures/guard/000.png" id="22_8ftst"]
+[ext_resource type="Texture2D" uid="uid://blpyfax3tf8rq" path="res://assets/Creatures/guard/001.png" id="23_6qp76"]
+[ext_resource type="Texture2D" uid="uid://dj45wvwl4egkh" path="res://assets/Creatures/guard/002.png" id="24_guj4n"]
+[ext_resource type="Texture2D" uid="uid://btyg1ua1lja2o" path="res://assets/Creatures/jelly/000.png" id="25_pvpg5"]
+[ext_resource type="Texture2D" uid="uid://df0cej4gdr5o7" path="res://assets/Creatures/jelly/001.png" id="26_pto5y"]
+[ext_resource type="Texture2D" uid="uid://chon68206kgkx" path="res://assets/Creatures/jelly/002.png" id="27_p8qq7"]
+[ext_resource type="Texture2D" uid="uid://e8epywfpii01" path="res://assets/Creatures/lizard/000.png" id="28_tltbc"]
+[ext_resource type="Texture2D" uid="uid://b23o7ny18gion" path="res://assets/Creatures/lizard/001.png" id="29_fgn24"]
+[ext_resource type="Texture2D" uid="uid://cmhnexslde246" path="res://assets/Creatures/lizard/002.png" id="30_wfqhs"]
+[ext_resource type="Texture2D" uid="uid://kyll6ula41od" path="res://assets/Creatures/moss/001.png" id="31_klvd1"]
+[ext_resource type="Texture2D" uid="uid://d01dstq3jao8l" path="res://assets/Creatures/moss/Moss.png" id="32_darms"]
+[ext_resource type="Texture2D" uid="uid://x7m7x1hef8sl" path="res://assets/Creatures/moss/002.png" id="33_lqx2k"]
+[ext_resource type="Texture2D" uid="uid://jq6ug056ebtg" path="res://assets/Creatures/plushbie/000.png" id="34_4lskv"]
+[ext_resource type="Texture2D" uid="uid://0krieonowbpn" path="res://assets/Creatures/plushbie/001.png" id="35_v4rlr"]
+[ext_resource type="Texture2D" uid="uid://ox6jcc44bcer" path="res://assets/Creatures/plushbie/002.png" id="36_vo7ci"]
+[ext_resource type="Texture2D" uid="uid://bkppbgt25k7up" path="res://assets/Creatures/sand/000.png" id="37_yq0b0"]
+[ext_resource type="Texture2D" uid="uid://djvmkjpe08f3d" path="res://assets/Creatures/sand/001.png" id="38_jfrsi"]
+[ext_resource type="Texture2D" uid="uid://csjkfavp0vvs0" path="res://assets/Creatures/sand/002.png" id="39_vg48w"]
+[ext_resource type="Texture2D" uid="uid://ki585saeoemn" path="res://assets/Creatures/sheep/000.png" id="40_cxwcl"]
+[ext_resource type="Texture2D" uid="uid://df2t7pb2pd0y8" path="res://assets/Creatures/sheep/001.png" id="41_lfvcp"]
+[ext_resource type="Texture2D" uid="uid://b28nthua8cpcs" path="res://assets/Creatures/sheep/002.png" id="42_dxbxn"]
+[ext_resource type="Texture2D" uid="uid://cd1eibmksbk8q" path="res://assets/Creatures/shroom/000.png" id="43_wlwe3"]
+[ext_resource type="Texture2D" uid="uid://bd7ql04ctopwd" path="res://assets/Creatures/shroom/001.png" id="44_hxvgm"]
+[ext_resource type="Texture2D" uid="uid://cqdlmukhm23mr" path="res://assets/Creatures/shroom/002.png" id="45_nhbsl"]
+[ext_resource type="Texture2D" uid="uid://ybc6103656pk" path="res://assets/Creatures/shrump/000.png" id="46_ly61b"]
+[ext_resource type="Texture2D" uid="uid://dca7cyyrppe0m" path="res://assets/Creatures/shrump/001.png" id="47_yh83i"]
+[ext_resource type="Texture2D" uid="uid://b4srlytlrrmj3" path="res://assets/Creatures/shrump/002.png" id="48_a8833"]
+[ext_resource type="Texture2D" uid="uid://cxc23ws075b3i" path="res://assets/Creatures/spider/000.png" id="49_omdwb"]
+[ext_resource type="Texture2D" uid="uid://cfvrgp77olhig" path="res://assets/Creatures/spider/001.png" id="50_8qgl6"]
+[ext_resource type="Texture2D" uid="uid://cudq3dlkc56uj" path="res://assets/Creatures/spider/002.png" id="51_mrfnc"]
+[ext_resource type="Texture2D" uid="uid://ctjmileavlqic" path="res://assets/Creatures/strings/000.png" id="52_ujqlx"]
+[ext_resource type="Texture2D" uid="uid://v0s6sy3pnol7" path="res://assets/Creatures/strings/001.png" id="53_2kpd7"]
+[ext_resource type="Texture2D" uid="uid://hlycggqapqr7" path="res://assets/Creatures/strings/002.png" id="54_qwfx6"]
+[ext_resource type="Texture2D" uid="uid://dfjf8fhdkbawg" path="res://assets/Creatures/tea/000.png" id="55_0f6yq"]
+[ext_resource type="Texture2D" uid="uid://c6qmdokjebm51" path="res://assets/Creatures/tea/001.png" id="56_ubs68"]
+[ext_resource type="Texture2D" uid="uid://cjeuk8sct633g" path="res://assets/Creatures/tea/002.png" id="57_lbu4p"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_m5w7u")
+}],
+"loop": true,
+"name": &"angel_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_8pwxr")
+}],
+"loop": true,
+"name": &"angel_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_k1jv3")
+}],
+"loop": true,
+"name": &"angel_eat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_fprud")
+}],
+"loop": true,
+"name": &"bear_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_n3cw8")
+}],
+"loop": true,
+"name": &"bear_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_801tx")
+}],
+"loop": true,
+"name": &"bear_eat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_mahan")
+}],
+"loop": true,
+"name": &"buggi_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_7iptj")
+}],
+"loop": true,
+"name": &"buggi_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_kvnom")
+}],
+"loop": true,
+"name": &"buggi_eat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_k1hg7")
+}],
+"loop": true,
+"name": &"dandi_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_j5epe")
+}],
+"loop": true,
+"name": &"dandi_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_77t4i")
+}],
+"loop": true,
+"name": &"dandi_eat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_pj3tv")
+}],
+"loop": true,
+"name": &"doll_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_einus")
+}],
+"loop": true,
+"name": &"doll_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_ljor3")
+}],
+"loop": true,
+"name": &"doll_eat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_mtgom")
+}],
+"loop": true,
+"name": &"eyes_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_ahcfe")
+}],
+"loop": true,
+"name": &"eyes_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_5dfee")
+}],
+"loop": true,
+"name": &"eyes_eat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_lb2o0")
+}],
+"loop": true,
+"name": &"fairy_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_5umb3")
+}],
+"loop": true,
+"name": &"fairy_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_ak77n")
+}],
+"loop": true,
+"name": &"fairy_eat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_8ftst")
+}],
+"loop": true,
+"name": &"guard_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_6qp76")
+}],
+"loop": true,
+"name": &"guard_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("24_guj4n")
+}],
+"loop": true,
+"name": &"guard_eat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("25_pvpg5")
+}],
+"loop": true,
+"name": &"jelly_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_pto5y")
+}],
+"loop": true,
+"name": &"jelly_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("27_p8qq7")
+}],
+"loop": true,
+"name": &"jelly_eat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_tltbc")
+}],
+"loop": true,
+"name": &"lizard_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_fgn24")
+}],
+"loop": true,
+"name": &"lizard_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("30_wfqhs")
+}],
+"loop": true,
+"name": &"lizard_eat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("31_klvd1")
+}],
+"loop": true,
+"name": &"moss_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("32_darms")
+}],
+"loop": true,
+"name": &"moss_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("33_lqx2k")
+}],
+"loop": true,
+"name": &"moss_eat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("34_4lskv")
+}],
+"loop": true,
+"name": &"plushbie_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("35_v4rlr")
+}],
+"loop": true,
+"name": &"plushbie_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("36_vo7ci")
+}],
+"loop": true,
+"name": &"plushbie_eat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("37_yq0b0")
+}],
+"loop": true,
+"name": &"sand_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("38_jfrsi")
+}],
+"loop": true,
+"name": &"sand_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("39_vg48w")
+}],
+"loop": true,
+"name": &"sand_eat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("40_cxwcl")
+}],
+"loop": true,
+"name": &"sheep_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("41_lfvcp")
+}],
+"loop": true,
+"name": &"sheep_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("42_dxbxn")
+}],
+"loop": true,
+"name": &"sheep_eat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("43_wlwe3")
+}],
+"loop": true,
+"name": &"shroom_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("44_hxvgm")
+}],
+"loop": true,
+"name": &"shroom_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("45_nhbsl")
+}],
+"loop": true,
+"name": &"shroom_eat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("46_ly61b")
+}],
+"loop": true,
+"name": &"shrump_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("47_yh83i")
+}],
+"loop": true,
+"name": &"shrump_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("48_a8833")
+}],
+"loop": true,
+"name": &"shrump_eat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("49_omdwb")
+}],
+"loop": true,
+"name": &"spider_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("50_8qgl6")
+}],
+"loop": true,
+"name": &"spider_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("51_mrfnc")
+}],
+"loop": true,
+"name": &"spider_eat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("52_ujqlx")
+}],
+"loop": true,
+"name": &"strings_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("53_2kpd7")
+}],
+"loop": true,
+"name": &"strings_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("54_qwfx6")
+}],
+"loop": true,
+"name": &"strings_eat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("55_0f6yq")
+}],
+"loop": true,
+"name": &"tea_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("56_ubs68")
+}],
+"loop": true,
+"name": &"tea_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("57_lbu4p")
+}],
+"loop": true,
+"name": &"tea_eat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_c1unk")
+}],
+"loop": true,
+"name": &"thang_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_iebaf")
+}],
+"loop": true,
+"name": &"thang_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_y8nqg")
+}],
+"loop": true,
+"name": &"thang_eat",
+"speed": 5.0
+}]

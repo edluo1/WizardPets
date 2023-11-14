@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://dpfmcsrslve73"
+path="res://.godot/imported/test_purchase_stuff.dialogue-7960bc88e15b28aad41c8c82680a6311.tres"
+
+[deps]
+
+source_file="res://dialogue/test_purchase_stuff.dialogue"
+dest_files=["res://.godot/imported/test_purchase_stuff.dialogue-7960bc88e15b28aad41c8c82680a6311.tres"]
+
+[params]
+
+defaults=true

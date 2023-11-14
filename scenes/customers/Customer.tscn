@@ -1,0 +1,73 @@
+[gd_scene load_steps=7 format=3 uid="uid://chogjrfwfls81"]
+
+[ext_resource type="Script" path="res://scripts/customers/Customer.gd" id="1_g7v22"]
+[ext_resource type="SpriteFrames" uid="uid://5bv0gypd845q" path="res://assets/customers/customer_frames.tres" id="1_wtn64"]
+
+[sub_resource type="Animation" id="Animation_do4nc"]
+resource_name = "Idle"
+length = 4.0
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpriteHolder")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0.505, 0, 1, 1, 0, 0.495, 0, 2, 1, 0, 0.505, 0, 3, 1, 0, 0.495, 0, 4, 1, 0, 0.505, 0)
+tracks/1/type = "scale_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpriteHolder")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 1, 1.01, 1, 1, 1, 1, 0.99, 1, 2, 1, 1, 1.01, 1, 3, 1, 1, 0.99, 1, 4, 1, 1, 1.01, 1)
+
+[sub_resource type="Animation" id="Animation_uqjx1"]
+resource_name = "Walk"
+length = 2.0
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpriteHolder")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0.505, 0, 0.2, 1, 0, 0.48, 0, 0.4, 1, 0, 0.505, 0, 0.6, 1, 0, 0.48, 0, 0.8, 1, 0, 0.505, 0, 1, 1, 0, 0.48, 0, 1.2, 1, 0, 0.505, 0, 1.4, 1, 0, 0.48, 0, 1.6, 1, 0, 0.505, 0, 1.8, 1, 0, 0.48, 0, 2, 1, 0, 0.505, 0)
+tracks/1/type = "scale_3d"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpriteHolder")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 1, 1.01, 1, 0.2, 1, 1, 0.95, 1, 0.4, 1, 1, 1.01, 1, 0.6, 1, 1, 0.95, 1, 0.8, 1, 1, 1.01, 1, 1, 1, 1, 0.95, 1, 1.2, 1, 1, 1.01, 1, 1.4, 1, 1, 0.95, 1, 1.6, 1, 1, 1.01, 1, 1.8, 1, 1, 0.95, 1, 2, 1, 1, 1.01, 1)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_433f5"]
+_data = {
+"Idle": SubResource("Animation_do4nc"),
+"Walk": SubResource("Animation_uqjx1")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_unjec"]
+
+[node name="Customer" type="CharacterBody3D"]
+script = ExtResource("1_g7v22")
+
+[node name="Sprite_Base" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0)
+
+[node name="Camera_Target" type="Node3D" parent="Sprite_Base"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.25, 4.5)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite_Base"]
+libraries = {
+"": SubResource("AnimationLibrary_433f5")
+}
+
+[node name="SpriteHolder" type="Node3D" parent="Sprite_Base"]
+transform = Transform3D(1, 0, 0, 0, 1.01, 0, 0, 0, 1, 0, 0.505, 0)
+
+[node name="WizardSprite" type="AnimatedSprite3D" parent="Sprite_Base/SpriteHolder"]
+transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, 0, 0, 0)
+sprite_frames = ExtResource("1_wtn64")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.25, 0)
+shape = SubResource("BoxShape3D_unjec")

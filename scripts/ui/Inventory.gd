@@ -1,7 +1,7 @@
 extends Control
 
 const SlotClass = preload("res://scripts/ui/Slot.gd")
-@onready var inventory_slots = $GridContainer
+@onready var inventory_slots = $InventoryUI/GridContainer
 var holding_item = null
 
 # Called when the node enters the scene tree for the first time.

@@ -1,0 +1,13 @@
+[gd_scene load_steps=5 format=3 uid="uid://db7sjx2mj2ks6"]
+
+[ext_resource type="PackedScene" uid="uid://d4cdnnww2whxi" path="res://scenes/ui/Item.tscn" id="1_mk638"]
+[ext_resource type="Texture2D" uid="uid://cbtradu1ubt0q" path="res://assets/items/trap/open.png" id="2_sbfql"]
+[ext_resource type="Texture2D" uid="uid://dj5t68yewsjpq" path="res://assets/items/trap/alert.png" id="3_wog5i"]
+[ext_resource type="Texture2D" uid="uid://dwmaenowyw4vb" path="res://assets/items/trap/close.png" id="4_s2fq3"]
+
+[node name="Item" instance=ExtResource("1_mk638")]
+item_name = "Pet Trap"
+item_state_sprites = Array[Texture2D]([ExtResource("2_sbfql"), ExtResource("3_wog5i"), ExtResource("4_s2fq3")])
+
+[node name="ItemSprite" parent="." index="0"]
+texture = ExtResource("2_sbfql")

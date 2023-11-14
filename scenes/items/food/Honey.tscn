@@ -1,0 +1,14 @@
+[gd_scene load_steps=6 format=3 uid="uid://oh2trduwid4e"]
+
+[ext_resource type="PackedScene" uid="uid://d4cdnnww2whxi" path="res://scenes/ui/Item.tscn" id="1_myo1o"]
+[ext_resource type="Texture2D" uid="uid://bvvowupca6myo" path="res://assets/items/food/Honey 1.png" id="2_sjohg"]
+[ext_resource type="Texture2D" uid="uid://s3f41s74qh4l" path="res://assets/items/food/Honey 2.png" id="3_tmnfx"]
+[ext_resource type="Texture2D" uid="uid://dkyndvpfg1e3f" path="res://assets/items/food/Honey 3.png" id="4_8cn1a"]
+[ext_resource type="Texture2D" uid="uid://b05u4wc8q87ra" path="res://assets/items/food/Honey 4.png" id="5_h64gw"]
+
+[node name="Item" instance=ExtResource("1_myo1o")]
+item_name = "Honey"
+item_state_sprites = Array[Texture2D]([ExtResource("2_sjohg"), ExtResource("3_tmnfx"), ExtResource("4_8cn1a"), ExtResource("5_h64gw")])
+
+[node name="ItemSprite" parent="." index="0"]
+texture = ExtResource("2_sjohg")

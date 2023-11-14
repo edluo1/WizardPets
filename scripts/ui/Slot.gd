@@ -4,6 +4,7 @@ var ItemClass = preload("res://scenes/ui/Item.tscn")
 var item = null
 
 # Called when the node enters the scene tree for the first time.
+# Currently just loads in random items.
 func _ready():
 	if randi() % 2 == 0:
 		item = ItemClass.instantiate()
@@ -12,6 +13,7 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	pass
+	
 
 func pickFromSlot():
 	if item != null:

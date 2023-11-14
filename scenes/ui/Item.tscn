@@ -1,11 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://d4cdnnww2whxi"]
+[gd_scene load_steps=3 format=3 uid="uid://d4cdnnww2whxi"]
 
 [ext_resource type="Texture2D" uid="uid://bl5toh6ewlo4i" path="res://assets/items/apple_placeholder.png" id="1_s1li7"]
+[ext_resource type="Script" path="res://scripts/items/item.gd" id="1_u7pdm"]
 
 [node name="Item" type="Node2D"]
 z_index = 1
+script = ExtResource("1_u7pdm")
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="ItemSprite" type="TextureRect" parent="."]
 offset_right = 40.0
 offset_bottom = 40.0
 mouse_filter = 2

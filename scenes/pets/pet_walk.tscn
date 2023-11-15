@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://dey8il6ro51hd"]
 
-[ext_resource type="Script" path="res://scripts/pets/pet_walk.gd" id="1_ndc18"]
-[ext_resource type="SpriteFrames" uid="uid://bbl5mot0w2jtg" path="res://assets/Creatures/PetFrames.tres" id="2_fo685"]
+[ext_resource type="Script" path="res://scripts/pets/pet_walk.gd" id="1_umsjc"]
+[ext_resource type="SpriteFrames" uid="uid://bbl5mot0w2jtg" path="res://assets/Creatures/PetFrames.tres" id="2_202dn"]
 
 [sub_resource type="Animation" id="Animation_do4nc"]
 resource_name = "Idle"
@@ -48,7 +48,7 @@ _data = {
 [sub_resource type="BoxShape3D" id="BoxShape3D_xx636"]
 
 [node name="Pet" type="CharacterBody3D"]
-script = ExtResource("1_ndc18")
+script = ExtResource("1_umsjc")
 
 [node name="Sprite_Base" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0)
@@ -66,8 +66,8 @@ transform = Transform3D(1, 0, 0, 0, 1.00296, 0, 0, 0, 1, 0, 0.50148, 0)
 
 [node name="PetSprite" type="AnimatedSprite3D" parent="Sprite_Base/SpriteHolder"]
 transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, 0, 0, 0)
-sprite_frames = ExtResource("2_fo685")
-animation = &"moss_2"
+sprite_frames = ExtResource("2_202dn")
+animation = &"moss_1"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.25, 0)

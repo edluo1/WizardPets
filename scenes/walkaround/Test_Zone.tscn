@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://d4m8xa02kg0d3" path="res://scenes/player/wizard_walk.tscn" id="2_2jg6i"]
 [ext_resource type="PackedScene" uid="uid://cmjowgurgbfp7" path="res://scenes/player/bubble.tscn" id="3_r536o"]
 [ext_resource type="PackedScene" uid="uid://bhg1xpq75a4kv" path="res://scenes/ui/Cameraman.tscn" id="4_stfke"]
-[ext_resource type="PackedScene" uid="uid://dey8il6ro51hd" path="res://assets/items/pet_walk.tscn" id="5_vs2e7"]
+[ext_resource type="Script" path="res://scripts/pets/TestPetSpawner.gd" id="5_u8n6l"]
 
 [node name="Test_Zone" type="Node3D"]
 
@@ -32,5 +32,7 @@ target = NodePath("../Bubble2")
 [node name="Cameraman" parent="." node_paths=PackedStringArray("target") instance=ExtResource("4_stfke")]
 target = NodePath("../Wizard")
 
-[node name="Pet" parent="." instance=ExtResource("5_vs2e7")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.25421, 2.38419e-07, 0.142861)
+[node name="TestPetSpawner" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.10067, 0, 0)
+script = ExtResource("5_u8n6l")
+ID = 1

@@ -7,8 +7,6 @@ var eastbound = true
 @export var hasBackpack: bool
 @export var SPEED = 2.5
 @export var bubbles: Array[BubbleSprite]
-func _ready():
-	print("wizard loaded")
 
 func _physics_process(delta):
 	var input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")

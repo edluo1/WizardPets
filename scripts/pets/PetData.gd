@@ -7,6 +7,7 @@ class_name PetData
 @export var kindness: int = 10
 @export var cuteness: int = 10
 @export var mood: int = 50
+@export var taglist: Array
 @export var eatsLettuce: bool
 @export var eatsMeat: bool
 @export var eatsHoney: bool

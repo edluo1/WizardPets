@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://cy2uq5mug5584" path="res://assets/Creatures/fairy/small.png" id="4_n3j6u"]
 [ext_resource type="Texture2D" uid="uid://cu73gujxvq508" path="res://assets/Creatures/plushbie/small.png" id="5_phwq8"]
 [ext_resource type="Texture2D" uid="uid://fiueae5237d0" path="res://assets/Creatures/doll/small.png" id="5_qlfnq"]
-[ext_resource type="Texture2D" path="res://assets/Creatures/shroop/small.png" id="6_dumks"]
 [ext_resource type="Texture2D" uid="uid://btuhcabgkoacd" path="res://assets/Creatures/eyes/small.png" id="6_u0rl6"]
 [ext_resource type="Texture2D" uid="uid://cuokah538asc0" path="res://assets/Creatures/shrump/small.png" id="7_saybb"]
 [ext_resource type="Texture2D" uid="uid://dhl28hbxihagb" path="res://assets/Creatures/guard/small.png" id="8_l0cua"]
@@ -17,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://dvh87pxpin30u" path="res://assets/Creatures/moss/small.png" id="11_yq24n"]
 [ext_resource type="Texture2D" uid="uid://bykq12q4yba4e" path="res://assets/Creatures/sand/small.png" id="13_7n7ib"]
 [ext_resource type="Texture2D" uid="uid://doyym4fqmwk5g" path="res://assets/Creatures/sheep/small.png" id="14_ivhfc"]
+[ext_resource type="Texture2D" uid="uid://dhotilaxt5w3e" path="res://assets/Creatures/shroom/small.png" id="15_ilwte"]
 [ext_resource type="Texture2D" uid="uid://cjj6gl5ngbddx" path="res://assets/Creatures/spider/small.png" id="17_22jf7"]
 [ext_resource type="Texture2D" uid="uid://vhfcy7gtj36y" path="res://assets/Creatures/strings/small.png" id="18_7qwkf"]
 [ext_resource type="Texture2D" uid="uid://2hu1teedcfcf" path="res://assets/Creatures/tea/small.png" id="19_7s7ek"]
@@ -137,7 +137,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("6_dumks")
+"texture": ExtResource("15_ilwte")
 }],
 "loop": true,
 "name": &"shroom",

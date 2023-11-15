@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddop5nbmwkc6p"
-path.s3tc="res://.godot/imported/Forest_Tile_Walkable_1_B.png-c4116f21398833ebd4e891bf2fd2cfac.s3tc.ctex"
+uid="uid://c0p7nukgrvsqd"
+path.s3tc="res://.godot/imported/Dreamland_Tile_Walkable_1.png-c73a350192e8347c4e1302b98a58129a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://assets/game_maps/tiles/Forest_Tile_Walkable_1_B.png"
-dest_files=["res://.godot/imported/Forest_Tile_Walkable_1_B.png-c4116f21398833ebd4e891bf2fd2cfac.s3tc.ctex"]
+source_file="res://assets/game_maps/tiles/dream/Dreamland_Tile_Walkable_1.png"
+dest_files=["res://.godot/imported/Dreamland_Tile_Walkable_1.png-c73a350192e8347c4e1302b98a58129a.s3tc.ctex"]
 
 [params]
 

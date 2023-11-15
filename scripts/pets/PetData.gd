@@ -7,8 +7,9 @@ class_name PetData
 @export var kindness: int = 10
 @export var cuteness: int = 10
 @export var mood: int = 50
-enum Food{lettuce, meat, honey, nothing}
-@export var diet: Food
+@export var eatsLettuce: bool
+@export var eatsMeat: bool
+@export var eatsHoney: bool
 enum MoveStyle{skitter, bounce, fly}
 @export var movement: MoveStyle
 enum ReactionStyle{skittish, cautious, passive}

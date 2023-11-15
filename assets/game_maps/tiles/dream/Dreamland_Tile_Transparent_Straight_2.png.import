@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ccsldgac2wjmr"
-path="res://.godot/imported/Dreamland_Tile_Walkable_2.png-c0758f1bccb814c5583c98a62c8e9131.ctex"
+uid="uid://b4hjlyh6m6jd5"
+path="res://.godot/imported/Dreamland_Tile_Transparent_Straight_2.png-4c24479f793a80657b4c9a029b13d39f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/game_maps/tiles/Dreamland_Tile_Walkable_2.png"
-dest_files=["res://.godot/imported/Dreamland_Tile_Walkable_2.png-c0758f1bccb814c5583c98a62c8e9131.ctex"]
+source_file="res://assets/game_maps/tiles/dream/Dreamland_Tile_Transparent_Straight_2.png"
+dest_files=["res://.godot/imported/Dreamland_Tile_Transparent_Straight_2.png-4c24479f793a80657b4c9a029b13d39f.ctex"]
 
 [params]
 

@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmma6fnvrbmtp"]
+
+[ext_resource type="Script" path="res://scripts/items/Placeable.gd" id="1_3be8k"]
+
+[node name="PlaceableItem" type="Node3D" node_paths=PackedStringArray("placeable_item")]
+script = ExtResource("1_3be8k")
+placeable_item = NodePath("")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="SpriteHolder" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1.00296, 0, 0, 0, 1, 0, 0.75, 0)
+
+[node name="Sprite3D" type="Sprite3D" parent="SpriteHolder"]

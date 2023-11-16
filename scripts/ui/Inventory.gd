@@ -2,7 +2,9 @@ extends Control
 
 const SlotClass = preload("res://scripts/ui/Slot.gd")
 @onready var inventory_slots = $InventoryUI/GridContainer
-var holding_item = null
+var holding_item: Item = null
+
+signal item_selected(item)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -12,7 +14,9 @@ func _ready():
 func slot_gui_input(event: InputEvent, slot: SlotClass):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT && event.pressed:
+			print("item click")
 			if holding_item != null:
+				print("item get")
 				if !slot.item: # Place held item into slot
 					slot.putIntoSlot(holding_item)
 					holding_item = null

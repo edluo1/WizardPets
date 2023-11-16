@@ -1,11 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://kk78kfdw7p47"]
+[gd_scene load_steps=5 format=3 uid="uid://kk78kfdw7p47"]
 
 [ext_resource type="Texture2D" uid="uid://ddd33rsu4bbms" path="res://assets/game_maps/forest_concept.jpg" id="1_2arri"]
 [ext_resource type="PackedScene" uid="uid://d4m8xa02kg0d3" path="res://scenes/player/wizard_walk.tscn" id="2_jqveb"]
 [ext_resource type="PackedScene" uid="uid://cmjowgurgbfp7" path="res://scenes/player/bubble.tscn" id="3_ccamx"]
 [ext_resource type="PackedScene" uid="uid://bhg1xpq75a4kv" path="res://scenes/ui/Cameraman.tscn" id="4_026fb"]
-[ext_resource type="PackedScene" uid="uid://dey8il6ro51hd" path="res://assets/items/pet_walk.tscn" id="5_m0dxb"]
-[ext_resource type="PackedScene" uid="uid://bonhovjbufpck" path="res://scenes/ui/Inventory.tscn" id="6_vf3en"]
 
 [node name="Test_Zone" type="Node3D"]
 
@@ -14,14 +12,14 @@ transform = Transform3D(6, 0, 0, 0, 7.15493e-08, 6, 0, -6, 7.15493e-08, 0.000306
 sorting_offset = -10.0
 texture = ExtResource("1_2arri")
 
-[node name="Wizard" parent="." node_paths=PackedStringArray("bubbles") instance=ExtResource("2_jqveb")]
+[node name="Wizard" parent="." instance=ExtResource("2_jqveb")]
 hasBackpack = true
-bubbles = [NodePath("../Bubble1"), NodePath("../Bubble2"), NodePath("../Bubble3")]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
 
 [node name="Bubble1" parent="." node_paths=PackedStringArray("target") instance=ExtResource("3_ccamx")]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, -1.9988, 0.616087, 1.26031)
 target = NodePath("../Wizard")
 
 [node name="Bubble2" parent="." node_paths=PackedStringArray("target") instance=ExtResource("3_ccamx")]
@@ -32,8 +30,3 @@ target = NodePath("../Bubble2")
 
 [node name="Cameraman" parent="." node_paths=PackedStringArray("target") instance=ExtResource("4_026fb")]
 target = NodePath("../Wizard")
-
-[node name="Pet" parent="." instance=ExtResource("5_m0dxb")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.25421, 2.38419e-07, 0.142861)
-
-[node name="Inventory" parent="." instance=ExtResource("6_vf3en")]

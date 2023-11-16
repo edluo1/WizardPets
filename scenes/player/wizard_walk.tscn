@@ -1,7 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://d4m8xa02kg0d3"]
+[gd_scene load_steps=9 format=3 uid="uid://d4m8xa02kg0d3"]
 
 [ext_resource type="Script" path="res://scripts/player/wizard_walk.gd" id="1_5kdkn"]
 [ext_resource type="SpriteFrames" uid="uid://nqs8vnoes28s" path="res://assets/player/wizard_sprites.tres" id="2_wonjj"]
+[ext_resource type="PackedScene" uid="uid://bonhovjbufpck" path="res://scenes/ui/Inventory.tscn" id="3_rcimo"]
+[ext_resource type="PackedScene" uid="uid://dw11r4axpgcnv" path="res://scenes/player/ItemPlacer.tscn" id="4_krv0b"]
 
 [sub_resource type="Animation" id="Animation_do4nc"]
 resource_name = "Idle"
@@ -72,3 +74,10 @@ animation = &"SW_BP"
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.25, 0)
 shape = SubResource("BoxShape3D_xx636")
+
+[node name="Inventory" parent="." instance=ExtResource("3_rcimo")]
+
+[node name="ItemPlacer" parent="." node_paths=PackedStringArray("player") instance=ExtResource("4_krv0b")]
+player = NodePath("..")
+
+[connection signal="item_selected" from="Inventory" to="." method="_on_inventory_item_selected"]

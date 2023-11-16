@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://damrt7d43tm0t"]
 
 [ext_resource type="Texture2D" uid="uid://biavscdgomq6f" path="res://assets/player/sprite_placeholder.png" id="1_cgg32"]
-[ext_resource type="Script" path="res://scripts/player/ItemInventory.gd" id="2_yi2yy"]
+[ext_resource type="PackedScene" uid="uid://bonhovjbufpck" path="res://scenes/ui/Inventory.tscn" id="2_1ll35"]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_tqtaw"]
 height = 2.83351
@@ -27,5 +27,4 @@ texture = ExtResource("1_cgg32")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="CharacterBody3D"]
 root_node = NodePath("../..")
 
-[node name="Inventory" type="Node" parent="."]
-script = ExtResource("2_yi2yy")
+[node name="Inventory" parent="." instance=ExtResource("2_1ll35")]

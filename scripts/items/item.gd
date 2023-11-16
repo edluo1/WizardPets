@@ -1,8 +1,17 @@
 extends Node
 
+class_name Item
+
+enum ItemType {
+	PLACEABLE = 1,
+	THROWABLE = 2,
+	CONSUMABLE = 4
+}
+
 @export var item_name: String = ""
 @export var placeable: bool = true
 @export var throwable: bool = false
+@export var base_item_type: ItemType
 
 var state_index: int = 0;
 @onready var itemSprite = $ItemSprite

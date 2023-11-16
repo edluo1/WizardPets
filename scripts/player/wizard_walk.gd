@@ -1,7 +1,8 @@
-extends CharacterBody3D
+class_name WizardWalk extends CharacterBody3D
 
 @onready var animationPlayer = $Sprite_Base/AnimationPlayer
 @onready var wizardSprite = $Sprite_Base/SpriteHolder/WizardSprite
+@onready var itemPlacer = $ItemPlacer
 var northbound = false
 var eastbound = true
 @export var hasBackpack: bool
@@ -41,3 +42,20 @@ func _physics_process(delta):
 	wizardSprite.play(sprite)
 	
 	move_and_slide()
+	
+func _input(event):
+	if event.is_action_pressed("ui_select") and itemPlacer.item_to_place != null:
+		itemPlacer._place_item()
+
+func _on_inventory_item_selected(item):
+	_handle_item_selection(item)
+	
+func _handle_item_selection(item: Item) -> void:
+	if item == null:
+		return
+	
+	if item.placeable:
+		print("item selected for placement")
+		itemPlacer.item_to_place = item
+	else:
+		itemPlacer.item_to_place = null

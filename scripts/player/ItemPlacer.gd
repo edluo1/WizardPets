@@ -1,4 +1,4 @@
-class_name ItemPlacer extends Node2D
+class_name ItemPlacer extends Node3D
 
 @export var player: WizardWalk
 

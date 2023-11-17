@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cn67sy508tk8a"]
+
+[ext_resource type="PackedScene" uid="uid://bco80st2boc65" path="res://scenes/ui/ClickableObjects/ClickableObject.tscn" id="1_b17kg"]
+[ext_resource type="Texture2D" uid="uid://cu6wbtaf1bbfw" path="res://assets/game_maps/storefront/EndDay_UI.png" id="2_32sqi"]
+
+[node name="ClickableObject" instance=ExtResource("1_b17kg")]
+
+[node name="CollisionPolygon3D" parent="StaticBody3D" index="0"]
+polygon = PackedVector2Array(0.789541, 6.77689, 1.18994, 6.67876, 1.7085, 6.0733, 3.60999, 5.68481, 3.93472, 4.74731, 3.79497, 3.66127, 3.44615, 3.46488, 3.61209, 2.23388, 3.17563, -0.355573, 5.55431, -1.60019, 6.43058, -3.32194, 5.51374, -5.64558, 1.07002, -7.521, -2.7657, -6.72121, -4.63603, -4.85424, -4.93156, -3.23773, -4.26944, -1.53588, -2.24832, -0.350364, -2.38839, 1.24157, -2.18197, 2.68969, -2.06062, 3.31722, -2.65559, 4.07381, -2.76901, 4.91218, -2.00228, 5.58658, -0.0938814, 6.02579, 0.217429, 6.60196)
+
+[node name="Sprite3D" parent="." index="1"]
+texture = ExtResource("2_32sqi")

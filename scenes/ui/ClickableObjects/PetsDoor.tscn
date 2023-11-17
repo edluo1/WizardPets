@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c1xgta6okcu4r"]
+
+[ext_resource type="PackedScene" uid="uid://bco80st2boc65" path="res://scenes/ui/ClickableObjects/ClickableObject.tscn" id="1_sdyxa"]
+[ext_resource type="Texture2D" uid="uid://b4hxiqnynmeky" path="res://assets/game_maps/storefront/Pets_UI.png" id="2_h88iq"]
+
+[node name="ClickableObject" instance=ExtResource("1_sdyxa")]
+
+[node name="CollisionPolygon3D" parent="StaticBody3D" index="0"]
+depth = 2.0
+polygon = PackedVector2Array(4.30262, -7.39306, 2.91345, -8.16482, -3.67222, -8.52497, -7.42811, -8.26772, -8.09696, -7.49596, -9.12597, -1.37335, -8.92017, 2.89705, -6.75925, 6.55003, -2.69466, 9.22546, 1.26703, 8.60806, 3.73666, 6.03553, 5.07438, 3.0514, 5.48598, -0.910294, 5.07438, -6.3126)
+
+[node name="Sprite3D" parent="." index="1"]
+texture = ExtResource("2_h88iq")

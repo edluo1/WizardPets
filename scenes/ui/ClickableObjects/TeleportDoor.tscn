@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://btg2a8r11l0sl"]
+
+[ext_resource type="PackedScene" uid="uid://bco80st2boc65" path="res://scenes/ui/ClickableObjects/ClickableObject.tscn" id="1_c6f6x"]
+[ext_resource type="Texture2D" uid="uid://ch6seiw5tksww" path="res://assets/game_maps/storefront/Teleport_UI.png" id="2_331b8"]
+
+[node name="ClickableObject" instance=ExtResource("1_c6f6x")]
+
+[node name="CollisionPolygon3D" parent="StaticBody3D" index="0"]
+polygon = PackedVector2Array(4.60326, 6.19613, 4.29101, 7.57212, 3.11222, 8.11492, 2.17568, 8.13833, 1.39733, 9.11588, -1.67042, 8.78505, -2.03036, 7.99058, -2.77268, 8.05394, -4.32004, 7.07565, -5.04836, 5.88069, -5.50604, 4.25112, -4.51962, 4.19709, -4.0967, 3.43907, -4.81172, 1.78886, -4.73386, -1.2354, -5.70122, -0.870973, -6.39277, -1.62813, -5.8193, -2.09217, -5.60225, -2.87954, -6.41019, -3.6198, -7.17101, -5.14767, -5.82538, -5.87029, -4.51144, -6.36055, -3.18687, -6.41364, -2.30104, -7.27213, -0.640492, -7.36081, 0.48417, -7.13191, 1.22587, -7.33285, 3.74358, -5.83752, 4.78296, -5.08484, 5.78389, -3.4793, 5.61036, -1.13828, 4.44593, -0.807102, 4.04471, 3.0175, 3.20168, 4.56843, 4.19507, 4.83254)
+
+[node name="Sprite3D" parent="." index="1"]
+texture = ExtResource("2_331b8")

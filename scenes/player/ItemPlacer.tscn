@@ -2,5 +2,5 @@
 
 [ext_resource type="Script" path="res://scripts/player/ItemPlacer.gd" id="1_1hn48"]
 
-[node name="ItemPlacer" type="Node2D"]
+[node name="ItemPlacer" type="Node3D"]
 script = ExtResource("1_1hn48")

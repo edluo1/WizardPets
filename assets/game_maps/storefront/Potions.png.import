@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bv2m6q5wq27ru"
-path="res://.godot/imported/inventory_background.png-36589dc091ef9ff448e2d313d0a2031a.ctex"
+uid="uid://c7sx4tvyi4slt"
+path="res://.godot/imported/Potions.png-8da789a305402716c115f7d71b00df26.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/inventory_background.png"
-dest_files=["res://.godot/imported/inventory_background.png-36589dc091ef9ff448e2d313d0a2031a.ctex"]
+source_file="res://assets/game_maps/storefront/Potions.png"
+dest_files=["res://.godot/imported/Potions.png-8da789a305402716c115f7d71b00df26.ctex"]
 
 [params]
 

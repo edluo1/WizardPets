@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://bco80st2boc65"]
+
+[ext_resource type="Script" path="res://scripts/ui/ClickableObject.gd" id="1_qy2is"]
+
+[node name="ClickableObject" type="Node3D"]
+script = ExtResource("1_qy2is")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionPolygon3D" type="CollisionPolygon3D" parent="StaticBody3D"]
+polygon = PackedVector2Array(1.98952, -0.0804377, -1.01781, -0.00263631, -0.848131, 1.41302, 1.82613, 1.38823)
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+
+[connection signal="input_event" from="StaticBody3D" to="." method="_on_static_body_3d_input_event"]

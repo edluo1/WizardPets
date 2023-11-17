@@ -1,9 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://ccs2iedwnoqsr"]
+[gd_scene load_steps=10 format=3 uid="uid://ccs2iedwnoqsr"]
 
 [ext_resource type="PackedScene" uid="uid://chogjrfwfls81" path="res://scenes/customers/Customer.tscn" id="1_6hkjf"]
 [ext_resource type="PackedScene" uid="uid://d4m8xa02kg0d3" path="res://scenes/player/wizard_walk.tscn" id="2_hxhps"]
 [ext_resource type="Texture2D" uid="uid://ddd33rsu4bbms" path="res://assets/game_maps/forest_concept.jpg" id="3_xge0d"]
 [ext_resource type="PackedScene" uid="uid://bhg1xpq75a4kv" path="res://scenes/ui/Cameraman.tscn" id="4_5whr0"]
+[ext_resource type="Texture2D" uid="uid://bqxikopr8tb1k" path="res://assets/game_maps/storefront/Desk.png" id="5_j7tu5"]
+[ext_resource type="PackedScene" uid="uid://cn67sy508tk8a" path="res://scenes/ui/ClickableObjects/EndDay.tscn" id="6_o1ee8"]
+[ext_resource type="PackedScene" uid="uid://bt8j3wd8kexhw" path="res://scenes/ui/ClickableObjects/WorkBooks.tscn" id="7_3usaf"]
+[ext_resource type="PackedScene" uid="uid://btg2a8r11l0sl" path="res://scenes/ui/ClickableObjects/TeleportDoor.tscn" id="8_avusk"]
+[ext_resource type="PackedScene" uid="uid://c1xgta6okcu4r" path="res://scenes/ui/ClickableObjects/PetsDoor.tscn" id="9_ql7t0"]
 
 [node name="shop_purchase" type="Node3D"]
 
@@ -11,7 +16,7 @@
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.78292, 0, 0.902801)
 
 [node name="Wizard" parent="." instance=ExtResource("2_hxhps")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0.375135, 0.162537)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0, -0.984739)
 
 [node name="Floor" type="Sprite3D" parent="."]
 transform = Transform3D(6, 0, 0, 0, 7.15493e-08, 6, 0, -6, 7.15493e-08, -5.41403, -0.00285387, -1.45909)
@@ -20,3 +25,19 @@ texture = ExtResource("3_xge0d")
 
 [node name="Cameraman" parent="." node_paths=PackedStringArray("target") instance=ExtResource("4_5whr0")]
 target = NodePath("../Wizard")
+
+[node name="Table" type="Sprite3D" parent="."]
+pixel_size = 0.001
+texture = ExtResource("5_j7tu5")
+
+[node name="End Day" parent="." instance=ExtResource("6_o1ee8")]
+transform = Transform3D(0.05, 0, 0, 0, 0.0482963, 0.012941, 0, -0.012941, 0.0482963, -0.657401, 0.648268, 0.106235)
+
+[node name="Work Books" parent="." instance=ExtResource("7_3usaf")]
+transform = Transform3D(0.05, 0, 0, 0, 0.0482963, 0.012941, 0, -0.012941, 0.0482963, 0.60202, 0.441741, 0)
+
+[node name="Teleport Door" parent="." instance=ExtResource("8_avusk")]
+transform = Transform3D(0.1, 0, 0, 0, 0.0965926, 0.0258819, 0, -0.0258819, 0.0965926, 2.33712, 0.629297, -1.55766)
+
+[node name="Pets Door" parent="." instance=ExtResource("9_ql7t0")]
+transform = Transform3D(0.1, 0, 0, 0, 0.0965926, 0.0258819, 0, -0.0258819, 0.0965926, 4.71131, 0.32722, -2.04512)

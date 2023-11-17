@@ -63,11 +63,26 @@ layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_dthlo")
 script = ExtResource("3_m41kx")
 
+[node name="RichTextLabel" type="RichTextLabel" parent="InventoryUI/GridContainer/Slot1"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 75.0
+offset_right = 58.0
+offset_bottom = 115.0
+text = "0"
+
 [node name="Slot2" type="Panel" parent="InventoryUI/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_dthlo")
 script = ExtResource("3_m41kx")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="InventoryUI/GridContainer/Slot2"]
+offset_left = 18.0
+offset_top = 75.0
+offset_right = 58.0
+offset_bottom = 115.0
+text = "0"
 
 [node name="Slot3" type="Panel" parent="InventoryUI/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
@@ -75,8 +90,22 @@ layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_dthlo")
 script = ExtResource("3_m41kx")
 
+[node name="RichTextLabel" type="RichTextLabel" parent="InventoryUI/GridContainer/Slot3"]
+offset_left = 18.0
+offset_top = 75.0
+offset_right = 58.0
+offset_bottom = 115.0
+text = "0"
+
 [node name="Slot4" type="Panel" parent="InventoryUI/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_dthlo")
 script = ExtResource("3_m41kx")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="InventoryUI/GridContainer/Slot4"]
+offset_left = 18.0
+offset_top = 75.0
+offset_right = 58.0
+offset_bottom = 115.0
+text = "0"

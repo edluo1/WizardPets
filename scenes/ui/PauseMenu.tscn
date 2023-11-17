@@ -1,0 +1,79 @@
+[gd_scene load_steps=11 format=3 uid="uid://jfo2ludf5mob"]
+
+[ext_resource type="Texture2D" uid="uid://b6hjfhcuaa004" path="res://assets/ui/menu/Menu full.png" id="1_jipax"]
+[ext_resource type="Script" path="res://scripts/ui/PauseMenu.gd" id="1_krvdp"]
+[ext_resource type="Texture2D" uid="uid://nrqfx0sl1uqc" path="res://assets/ui/menu/Save.png" id="2_7njt7"]
+[ext_resource type="Texture2D" uid="uid://clb5oisn0di8k" path="res://assets/ui/menu/Save_Pressed.png" id="3_02kyr"]
+[ext_resource type="Texture2D" uid="uid://chtnlns3fr5n" path="res://assets/ui/menu/Load.png" id="4_fpe7k"]
+[ext_resource type="Texture2D" uid="uid://cr1u8p3qxbqm2" path="res://assets/ui/menu/Load_Pressed.png" id="5_pcmh8"]
+[ext_resource type="Texture2D" uid="uid://ionbq04wiaar" path="res://assets/ui/menu/Resume.png" id="6_ckjaf"]
+[ext_resource type="Texture2D" uid="uid://d0hvjls5bh8x" path="res://assets/ui/menu/Resume_Pressed.png" id="7_6svub"]
+[ext_resource type="Texture2D" uid="uid://bynhsfqv4b8rx" path="res://assets/ui/menu/Exit.png" id="8_63duq"]
+[ext_resource type="Texture2D" uid="uid://dmn3c3wa0vn3u" path="res://assets/ui/menu/Exit_Pressed.png" id="9_kp5y7"]
+
+[node name="PauseMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_krvdp")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -308.0
+offset_top = -311.0
+offset_right = 3532.0
+offset_bottom = 1849.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_jipax")
+stretch_mode = 2
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/TextureRect"]
+layout_mode = 0
+offset_left = 678.0
+offset_top = 366.0
+offset_right = 3666.0
+offset_bottom = 5898.0
+scale = Vector2(0.25, 0.25)
+theme_override_constants/v_separation = 200
+
+[node name="SaveButton" type="TextureButton" parent="CanvasLayer/TextureRect/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("2_7njt7")
+texture_pressed = ExtResource("3_02kyr")
+texture_hover = ExtResource("3_02kyr")
+
+[node name="LoadButton" type="TextureButton" parent="CanvasLayer/TextureRect/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("4_fpe7k")
+texture_pressed = ExtResource("5_pcmh8")
+texture_hover = ExtResource("5_pcmh8")
+
+[node name="ResumeButton" type="TextureButton" parent="CanvasLayer/TextureRect/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("6_ckjaf")
+texture_pressed = ExtResource("7_6svub")
+texture_hover = ExtResource("7_6svub")
+
+[node name="ExitButton" type="TextureButton" parent="CanvasLayer/TextureRect/GridContainer"]
+layout_mode = 2
+texture_normal = ExtResource("8_63duq")
+texture_pressed = ExtResource("9_kp5y7")
+texture_hover = ExtResource("9_kp5y7")
+
+[connection signal="pressed" from="CanvasLayer/TextureRect/GridContainer/SaveButton" to="." method="_on_save_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/TextureRect/GridContainer/LoadButton" to="." method="_on_load_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/TextureRect/GridContainer/ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/TextureRect/GridContainer/ExitButton" to="." method="_on_exit_button_pressed"]

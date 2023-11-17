@@ -14,9 +14,7 @@ func _ready():
 func slot_gui_input(event: InputEvent, slot: SlotClass):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT && event.pressed:
-			print("item click")
 			if holding_item != null:
-				print("item get")
 				if !slot.item: # Place held item into slot
 					slot.putIntoSlot(holding_item)
 					holding_item = null

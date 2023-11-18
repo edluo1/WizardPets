@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://d4rq43lf4f3t"]
+
+[ext_resource type="Script" path="res://scripts/ui/MusicManager.gd" id="1_uu2ef"]
+[ext_resource type="AudioStream" uid="uid://cmh7cgfff6pup" path="res://assets/audio/Dreams (loop) 92 BPM.wav" id="2_16lr3"]
+[ext_resource type="AudioStream" uid="uid://dfnj74852i5gx" path="res://assets/audio/Desert Zone (intro) 90 BPM.wav" id="2_yt15l"]
+[ext_resource type="AudioStream" uid="uid://2fbv73yh8dil" path="res://assets/audio/Desert Zone (loop) 90 BPM.wav" id="3_fxoug"]
+[ext_resource type="AudioStream" uid="uid://cmio4dus1w8ii" path="res://assets/audio/Dreams (intro) 92 BPM.wav" id="4_uhkyx"]
+
+[node name="MusicManager" type="Node" node_paths=PackedStringArray("introStreamers", "musicStreamers")]
+script = ExtResource("1_uu2ef")
+introStreamers = [NodePath("DesertStart"), NodePath("DreamStart")]
+musicStreamers = [NodePath("DesertMusic"), NodePath("DreamMusic")]
+
+[node name="DesertStart" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_yt15l")
+
+[node name="DesertMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_fxoug")
+
+[node name="DreamStart" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_uhkyx")
+
+[node name="DreamMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_16lr3")

@@ -1,0 +1,64 @@
+[gd_resource type="SpriteFrames" load_steps=7 format=3 uid="uid://cvu3bba1j57u8"]
+
+[ext_resource type="Texture2D" uid="uid://bvvowupca6myo" path="res://assets/items/food/Honey 1.png" id="1_sct1h"]
+[ext_resource type="Texture2D" uid="uid://b5m8al8qe4vm0" path="res://assets/items/food/leaf 1.png" id="2_iy74q"]
+[ext_resource type="Texture2D" uid="uid://bqhls0jxwy4p8" path="res://assets/items/food/meat (1).png" id="3_lice3"]
+[ext_resource type="Texture2D" uid="uid://dwmaenowyw4vb" path="res://assets/items/trap/close.png" id="4_b6xos"]
+[ext_resource type="Texture2D" uid="uid://dj5t68yewsjpq" path="res://assets/items/trap/alert.png" id="5_kua7d"]
+[ext_resource type="Texture2D" uid="uid://cbtradu1ubt0q" path="res://assets/items/trap/open.png" id="6_y2efo"]
+
+[resource]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_sct1h")
+}],
+"loop": true,
+"name": &"honey",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_iy74q")
+}],
+"loop": true,
+"name": &"lettuce",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_lice3")
+}],
+"loop": true,
+"name": &"meat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_b6xos")
+}],
+"loop": true,
+"name": &"trap_closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_kua7d")
+}],
+"loop": true,
+"name": &"trap_lure",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_y2efo")
+}],
+"loop": true,
+"name": &"trap_open",
+"speed": 5.0
+}]

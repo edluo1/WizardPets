@@ -1,0 +1,77 @@
+[gd_resource type="SpriteFrames" load_steps=14 format=3 uid="uid://cude6kyut2hx4"]
+
+[ext_resource type="Texture2D" uid="uid://8y15m6s1i47p" path="res://assets/items/Empty.png" id="1_fu4g4"]
+[ext_resource type="Texture2D" uid="uid://bvvowupca6myo" path="res://assets/items/food/Honey 1.png" id="2_8p0es"]
+[ext_resource type="Texture2D" uid="uid://s3f41s74qh4l" path="res://assets/items/food/Honey 2.png" id="3_5g6tt"]
+[ext_resource type="Texture2D" uid="uid://dkyndvpfg1e3f" path="res://assets/items/food/Honey 3.png" id="4_5avss"]
+[ext_resource type="Texture2D" uid="uid://b05u4wc8q87ra" path="res://assets/items/food/Honey 4.png" id="5_tuccm"]
+[ext_resource type="Texture2D" uid="uid://b5m8al8qe4vm0" path="res://assets/items/food/leaf 1.png" id="6_apib7"]
+[ext_resource type="Texture2D" uid="uid://gxvhx6sqmvyn" path="res://assets/items/food/leaf 2.png" id="7_q5848"]
+[ext_resource type="Texture2D" uid="uid://bhgcrb4wr0ys" path="res://assets/items/food/leaf 3.png" id="8_r7t4u"]
+[ext_resource type="Texture2D" uid="uid://c2lgqnsytlqda" path="res://assets/items/food/leaf 4.png" id="9_sae8c"]
+[ext_resource type="Texture2D" uid="uid://bqhls0jxwy4p8" path="res://assets/items/food/meat (1).png" id="10_5lsxp"]
+[ext_resource type="Texture2D" uid="uid://bwotlgunb77dg" path="res://assets/items/food/meat (2).png" id="11_70pbo"]
+[ext_resource type="Texture2D" uid="uid://ca7yrknbk5e5p" path="res://assets/items/food/meat (3).png" id="12_1xjdo"]
+[ext_resource type="Texture2D" uid="uid://cgdhx3rxvn7yo" path="res://assets/items/food/meat (4).png" id="13_xpdvd"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_fu4g4")
+}],
+"loop": true,
+"name": &"empty",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_8p0es")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5g6tt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5avss")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_tuccm")
+}],
+"loop": false,
+"name": &"honey",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_apib7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_q5848")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_r7t4u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_sae8c")
+}],
+"loop": false,
+"name": &"lettuce",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_5lsxp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_70pbo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_1xjdo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_xpdvd")
+}],
+"loop": false,
+"name": &"meat",
+"speed": 1.0
+}]

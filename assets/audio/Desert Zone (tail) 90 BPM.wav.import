@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://brtdatn1vfoco"
+path="res://.godot/imported/Desert Zone (tail) 90 BPM.wav-f6293d844c3d262bb052cce3d23d9ca6.sample"
+
+[deps]
+
+source_file="res://assets/audio/Desert Zone (tail) 90 BPM.wav"
+dest_files=["res://.godot/imported/Desert Zone (tail) 90 BPM.wav-f6293d844c3d262bb052cce3d23d9ca6.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

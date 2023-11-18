@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cmh7cgfff6pup"
+path="res://.godot/imported/Dreams (loop) 92 BPM.wav-ce5e1f1be40f5dbc506b1b7cb091369a.sample"
+
+[deps]
+
+source_file="res://assets/audio/Dreams (loop) 92 BPM.wav"
+dest_files=["res://.godot/imported/Dreams (loop) 92 BPM.wav-ce5e1f1be40f5dbc506b1b7cb091369a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

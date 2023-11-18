@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://d4rq43lf4f3t"]
+[gd_scene load_steps=6 format=3 uid="uid://cw5a3ebhh7gkk"]
 
 [ext_resource type="Script" path="res://scripts/ui/MusicManager.gd" id="1_uu2ef"]
 [ext_resource type="AudioStream" uid="uid://cmh7cgfff6pup" path="res://assets/audio/Dreams (loop) 92 BPM.wav" id="2_16lr3"]

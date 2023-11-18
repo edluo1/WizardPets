@@ -20,6 +20,10 @@ config/icon="res://icon.svg"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 _DataMgr="*res://scripts/global/DataManager.gd"
 
+[dialogue_manager]
+
+general/balloon_path="res://scripts/ui/balloon.tscn"
+
 [dotnet]
 
 project/assembly_name="WizardPets"

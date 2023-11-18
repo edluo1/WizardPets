@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://hwgcgegly7f1"
+path="res://.godot/imported/AngelGetEnding.dialogue-12c2eaab929f4f03657b09e6b5d82c77.tres"
+
+[deps]
+
+source_file="res://dialogue/AngelGetEnding.dialogue"
+dest_files=["res://.godot/imported/AngelGetEnding.dialogue-12c2eaab929f4f03657b09e6b5d82c77.tres"]
+
+[params]
+
+defaults=true

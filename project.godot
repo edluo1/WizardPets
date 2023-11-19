@@ -10,8 +10,12 @@ config_version=5
 
 [application]
 
-config/name="WizardPets"
-run/main_scene="res://scenes/displays/conversation_test.tscn"
+config/name="Little Wizard Pet Shop"
+config/name_localized={
+"en_US": "Little Wizard Pet Shop"
+}
+config/description="Pet Shop"
+run/main_scene="res://scenes/displays/MainScene.tscn"
 config/features=PackedStringArray("4.1", "C#", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -86,3 +90,4 @@ locale/translations_pot_files=PackedStringArray("res://dialogue/test.dialogue", 
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.12549, 0.294118, 0.262745, 1)

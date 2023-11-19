@@ -1,43 +1,55 @@
-[gd_scene load_steps=10 format=3 uid="uid://ccs2iedwnoqsr"]
+[gd_scene load_steps=11 format=3 uid="uid://ccs2iedwnoqsr"]
 
 [ext_resource type="PackedScene" uid="uid://chogjrfwfls81" path="res://scenes/customers/Customer.tscn" id="1_6hkjf"]
 [ext_resource type="PackedScene" uid="uid://d4m8xa02kg0d3" path="res://scenes/player/wizard_walk.tscn" id="2_hxhps"]
-[ext_resource type="Texture2D" uid="uid://ddd33rsu4bbms" path="res://assets/game_maps/forest_concept.jpg" id="3_xge0d"]
 [ext_resource type="PackedScene" uid="uid://bhg1xpq75a4kv" path="res://scenes/ui/Cameraman.tscn" id="4_5whr0"]
 [ext_resource type="Texture2D" uid="uid://bqxikopr8tb1k" path="res://assets/game_maps/storefront/Desk.png" id="5_j7tu5"]
 [ext_resource type="PackedScene" uid="uid://cn67sy508tk8a" path="res://scenes/ui/ClickableObjects/EndDay.tscn" id="6_o1ee8"]
 [ext_resource type="PackedScene" uid="uid://bt8j3wd8kexhw" path="res://scenes/ui/ClickableObjects/WorkBooks.tscn" id="7_3usaf"]
 [ext_resource type="PackedScene" uid="uid://btg2a8r11l0sl" path="res://scenes/ui/ClickableObjects/TeleportDoor.tscn" id="8_avusk"]
+[ext_resource type="MeshLibrary" uid="uid://d2d7j61yito18" path="res://assets/game_maps/tileLibrary.tres" id="9_a175k"]
 [ext_resource type="PackedScene" uid="uid://c1xgta6okcu4r" path="res://scenes/ui/ClickableObjects/PetsDoor.tscn" id="9_ql7t0"]
+[ext_resource type="PackedScene" uid="uid://bgl0pbtp6kuwa" path="res://scenes/game_maps/backdrop.tscn" id="10_jiekg"]
 
 [node name="shop_purchase" type="Node3D"]
 
 [node name="Customer" parent="." instance=ExtResource("1_6hkjf")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.78292, 0, 0.902801)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.78292, 0.205206, 0.902801)
 
 [node name="Wizard" parent="." instance=ExtResource("2_hxhps")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0, -0.984739)
-
-[node name="Floor" type="Sprite3D" parent="."]
-transform = Transform3D(6, 0, 0, 0, 7.15493e-08, 6, 0, -6, 7.15493e-08, -5.41403, -0.00285387, -1.45909)
-sorting_offset = -10.0
-texture = ExtResource("3_xge0d")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.25, 0.665483, -0.984739)
 
 [node name="Cameraman" parent="." node_paths=PackedStringArray("target") instance=ExtResource("4_5whr0")]
 target = NodePath("../Wizard")
 
 [node name="Table" type="Sprite3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0.620965, 0)
 pixel_size = 0.001
 texture = ExtResource("5_j7tu5")
 
-[node name="End Day" parent="." instance=ExtResource("6_o1ee8")]
+[node name="End Day" parent="Table" instance=ExtResource("6_o1ee8")]
 transform = Transform3D(0.05, 0, 0, 0, 0.0482963, 0.012941, 0, -0.012941, 0.0482963, -0.657401, 0.648268, 0.106235)
 
-[node name="Work Books" parent="." instance=ExtResource("7_3usaf")]
-transform = Transform3D(0.05, 0, 0, 0, 0.0482963, 0.012941, 0, -0.012941, 0.0482963, 0.60202, 0.441741, 0)
+[node name="Work Books" parent="Table" instance=ExtResource("7_3usaf")]
+transform = Transform3D(0.05, 0, 0, 0, 0.0482963, 0.012941, 0, -0.012941, 0.0482963, 0.60202, 0.441741, 0.14578)
 
 [node name="Teleport Door" parent="." instance=ExtResource("8_avusk")]
-transform = Transform3D(0.1, 0, 0, 0, 0.0965926, 0.0258819, 0, -0.0258819, 0.0965926, 2.33712, 0.629297, -1.55766)
+transform = Transform3D(0.1, 0, 0, 0, 0.0965926, 0.0258819, 0, -0.0258819, 0.0965926, 2.33712, 1.5052, -0.55766)
 
 [node name="Pets Door" parent="." instance=ExtResource("9_ql7t0")]
-transform = Transform3D(0.1, 0, 0, 0, 0.0965926, 0.0258819, 0, -0.0258819, 0.0965926, 4.71131, 0.32722, -2.04512)
+transform = Transform3D(0.1, 0, 0, 0, 0.0965926, 0.0258819, 0, -0.0258819, 0.0965926, 4.71131, 1.83446, -1.04512)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+
+[node name="Terrain" type="GridMap" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.045, 0)
+mesh_library = ExtResource("9_a175k")
+data = {
+"cells": PackedInt32Array(5, 65522, 18, 6, 65533, 18, 6, 65534, 18, 6, 65535, 18, 7, 65534, 18, 7, 65533, 18, 7, 65535, 18, 7, 0, 18, 7, 1, 18, 65528, 1, 18, 65528, 0, 18, 65528, 65535, 18, 65528, 65534, 18, 65528, 65533, 18, 65533, 65525, 18, 2, 65533, 18, 1, 65534, 18, 1, 65535, 7, 1, 0, 7, 2, 0, 7, 2, 1, 7, 3, 1, 7, 4, 0, 7, 5, 0, 7, 5, 65535, 7, 5, 65534, 18, 5, 65533, 18, 65530, 65533, 18, 65531, 65534, 18, 65532, 65534, 18, 65533, 2, 7, 65532, 2, 7, 2, 2, 7, 1, 2, 7, 1, 1, 7, 0, 2, 7, 0, 1, 7, 0, 0, 7, 0, 65535, 7, 0, 65534, 18, 65529, 65533, 18, 65529, 65534, 18, 65529, 65535, 7, 65529, 0, 7, 65529, 1, 7, 65529, 2, 7, 3, 2, 7, 4, 2, 7, 4, 1, 7, 5, 1, 7, 6, 0, 18, 6, 1, 18, 6, 2, 18, 5, 2, 7, 65530, 65534, 18, 65530, 65535, 7, 65530, 0, 7, 65530, 1, 7, 65530, 2, 7, 65531, 2, 7, 65532, 1, 7, 65531, 1, 7, 65531, 0, 7, 65532, 65535, 7, 65531, 65535, 7, 65532, 0, 7, 65533, 1, 7, 65534, 1, 7, 65534, 2, 7, 65535, 2, 7, 65535, 1, 7, 65535, 0, 7, 65535, 65535, 7, 65535, 65534, 18, 65534, 65535, 7, 65533, 0, 7, 65533, 65535, 7, 65534, 0, 7, 2, 65534, 18, 2, 65535, 7, 3, 65535, 7, 3, 65534, 18, 3, 65533, 18, 4, 65533, 18, 4, 65534, 18, 65533, 65534, 18, 65534, 65534, 18, 65533, 6, 18, 65527, 65534, 18, 65527, 65535, 18, 65527, 0, 18, 65527, 65533, 18, 65527, 1, 18, 3, 0, 7, 4, 65535, 7, 65533, 16, 18, 65532, 12, 18, 65529, 10, 18, 65528, 6, 18, 65527, 6, 18, 65527, 8, 18, 65528, 9, 18, 65532, 16, 18, 65530, 24, 18, 65531, 24, 18, 65532, 24, 18, 65534, 24, 18, 65535, 24, 18, 5, 17, 18, 5, 16, 18, 3, 16, 18, 2, 16, 18, 1, 16, 18, 0, 14, 18, 6, 8, 18, 8, 65533, 18, 8, 65534, 18, 1, 13, 18, 7, 5, 18, 6, 5, 18, 5, 10, 18, 6, 9, 18, 7, 8, 18, 7, 7, 18, 7, 4, 18, 8, 4, 18, 8, 3, 18, 8, 2, 18, 8, 1, 18, 8, 0, 18, 8, 65535, 18, 7, 65522, 18, 7, 65521, 18, 6, 65521, 18, 6, 65522, 18, 5, 65521, 18, 4, 65521, 18, 3, 65521, 18, 3, 65520, 18, 2, 65521, 18, 2, 65522, 18, 1, 65522, 18, 1, 65523, 18, 1, 65525, 18, 0, 65526, 18, 65535, 65526, 18, 65534, 65525, 18, 65531, 65522, 18, 65530, 65522, 18, 65530, 65521, 18, 65529, 65521, 18, 65528, 65521, 18, 65528, 65522, 18, 65529, 65522, 18, 65535, 65524, 18, 0, 65525, 18, 65532, 65522, 18, 65531, 65521, 18)
+}
+
+[node name="Backdrop" parent="." instance=ExtResource("10_jiekg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.41567, 0, -2.09766)
+
+[editable path="Backdrop"]

@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://73jm5qjy52vq"]
+[gd_scene load_steps=10 format=3 uid="uid://73jm5qjy52vq"]
 
 [ext_resource type="Script" path="res://scenes/ui/balloon.gd" id="1_4u26j"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_a8ve6"]
 [ext_resource type="StyleBox" uid="uid://cnvoe8wowryvu" path="res://assets/ui/textbox_texture.tres" id="2_kwo07"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="3_72ixx"]
+[ext_resource type="Texture2D" uid="uid://3hhrm5qgi8i6" path="res://assets/customers/wiz/1.png" id="5_in810"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 bg_color = Color(0, 0, 0, 1)
@@ -53,7 +54,7 @@ MarginContainer/constants/margin_right = 30
 MarginContainer/constants/margin_top = 15
 Panel/styles/panel = ExtResource("2_kwo07")
 
-[node name="ExampleBalloon" type="CanvasLayer"]
+[node name="DialogueBalloon" type="CanvasLayer"]
 layer = 100
 script = ExtResource("1_4u26j")
 
@@ -138,6 +139,28 @@ response_template = NodePath("ResponseExample")
 [node name="ResponseExample" type="Button" parent="Balloon/Responses/ResponsesMenu"]
 layout_mode = 2
 text = "Response example"
+
+[node name="MainWizImage" type="TextureRect" parent="Balloon"]
+unique_name_in_owner = true
+light_mask = 33
+z_index = -1
+offset_left = 568.0
+offset_top = -471.0
+offset_right = 3068.0
+offset_bottom = 2029.0
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("5_in810")
+expand_mode = 1
+
+[node name="PartnerImage" type="TextureRect" parent="Balloon"]
+unique_name_in_owner = true
+z_index = -1
+offset_left = 94.0
+offset_top = -438.0
+offset_right = 2594.0
+offset_bottom = 2062.0
+scale = Vector2(0.2, 0.2)
+expand_mode = 1
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
 [connection signal="response_selected" from="Balloon/Responses/ResponsesMenu" to="." method="_on_responses_menu_response_selected"]

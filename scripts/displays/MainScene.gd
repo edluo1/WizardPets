@@ -14,3 +14,14 @@ func _process(delta):
 func _on_button_pressed():
 	print("fds")
 	pass # Replace with function body.
+
+func _on_play_button_pressed():
+	get_tree().change_scene_to_file("res://scenes/game_maps/walkaround/World_Dream.tscn")
+	pass # Replace with function body.
+
+func _on_load_button_pressed():
+	pass # Replace with function body.
+
+
+func _on_exit_button_pressed():
+	pass # Replace with function body.

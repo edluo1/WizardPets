@@ -7,6 +7,9 @@ extends CanvasLayer
 @onready var dialogue_label: DialogueLabel = %DialogueLabel
 @onready var responses_menu: DialogueResponsesMenu = %ResponsesMenu
 
+@onready var main_wiz_image = %MainWizImage
+@onready var partner_image = %PartnerImage
+
 ## The dialogue resource
 var resource: DialogueResource
 
@@ -38,6 +41,16 @@ var dialogue_line: DialogueLine:
 			portrait.texture = load(portrait_path)
 		else:
 			portrait.texture = null
+			
+		var random_line = randi() % 6 + 1
+		if dialogue_line.character.to_lower() == "wiz":
+			var wiz_image_path: String = "res://assets/customers/wiz/%d.png" % random_line
+			if FileAccess.file_exists(wiz_image_path):
+				main_wiz_image.texture = load(wiz_image_path)
+		else:
+			var char_image_path: String = "res://assets/customers/%s/%d.png" % [dialogue_line.character.to_lower(), random_line]
+			if FileAccess.file_exists(char_image_path):
+				partner_image.texture = load(char_image_path)
 
 		dialogue_label.hide()
 		dialogue_label.dialogue_line = dialogue_line

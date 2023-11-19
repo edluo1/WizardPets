@@ -1,11 +1,18 @@
 extends Control
 
+var intro_dialogue_done: bool = false
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if !intro_dialogue_done:
+		var balloon = load("res://scenes/ui/balloon.tscn").instantiate()
+		get_tree().current_scene.add_child(balloon)
+		balloon.start(load("res://dialogue/intro_demo.dialogue"), "intro")
+		intro_dialogue_done = true
 	pass
 
 func _on_play_button_pressed():

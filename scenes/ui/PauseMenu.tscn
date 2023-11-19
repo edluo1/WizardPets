@@ -23,6 +23,8 @@ grow_vertical = 2
 script = ExtResource("1_krvdp")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+visible = false
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
 anchors_preset = 8

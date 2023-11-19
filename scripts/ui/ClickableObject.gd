@@ -1,6 +1,8 @@
 extends Node3D
 
-@export var runType: String
+@export var objectName: String
+
+signal clickable_selected(objectName)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -13,6 +15,7 @@ func _process(delta):
 func _on_static_body_3d_input_event(camera, event, position, normal, shape_idx):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT && event.pressed:
-			print("clicked the sprite")
+			print("clicked on %s" % objectName)
+			emit_signal("clickable_selected", objectName)
 	elif event is InputEventMouseMotion:
 		print("hovered over")

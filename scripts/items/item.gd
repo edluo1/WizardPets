@@ -1,7 +1,6 @@
 class_name Item
 extends Node
 
-
 enum ItemType {
 	PLACEABLE = 1,
 	THROWABLE = 2,

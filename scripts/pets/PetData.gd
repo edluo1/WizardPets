@@ -2,6 +2,7 @@ extends Object
 # Should be the base class for all pets.
 class_name PetData
 @export var ID: Res.ID = Res.ID.empty
+@export var name: String = ""
 @export var health: int = 100
 @export var strength: int = 10
 @export var kindness: int = 10

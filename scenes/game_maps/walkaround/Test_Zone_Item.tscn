@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://kk78kfdw7p47"]
+
+[ext_resource type="Texture2D" uid="uid://ddd33rsu4bbms" path="res://assets/game_maps/forest_concept.jpg" id="1_me777"]
+[ext_resource type="PackedScene" uid="uid://d4m8xa02kg0d3" path="res://scenes/player/wizard_walk.tscn" id="2_qeriu"]
+[ext_resource type="PackedScene" uid="uid://cmjowgurgbfp7" path="res://scenes/player/bubble.tscn" id="3_83nt2"]
+[ext_resource type="PackedScene" uid="uid://bhg1xpq75a4kv" path="res://scenes/ui/Cameraman.tscn" id="4_pknbn"]
+[ext_resource type="PackedScene" uid="uid://enhig5psrqcx" path="res://scenes/player/ItemPlacer.tscn" id="5_q1nou"]
+
+[node name="Test_Zone" type="Node3D"]
+
+[node name="Floor" type="Sprite3D" parent="."]
+transform = Transform3D(6, 0, 0, 0, 7.15493e-08, 6, 0, -6, 7.15493e-08, 0.000306964, -0.00285387, 0.00517046)
+sorting_offset = -10.0
+texture = ExtResource("1_me777")
+
+[node name="Wizard" parent="." instance=ExtResource("2_qeriu")]
+hasBackpack = true
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0)
+
+[node name="Bubble1" parent="." node_paths=PackedStringArray("target") instance=ExtResource("3_83nt2")]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, -1.9988, 0.616087, 1.26031)
+target = NodePath("../Wizard")
+
+[node name="Bubble2" parent="." node_paths=PackedStringArray("target") instance=ExtResource("3_83nt2")]
+target = NodePath("../Bubble1")
+
+[node name="Bubble3" parent="." node_paths=PackedStringArray("target") instance=ExtResource("3_83nt2")]
+target = NodePath("../Bubble2")
+
+[node name="Cameraman" parent="." node_paths=PackedStringArray("target") instance=ExtResource("4_pknbn")]
+target = NodePath("../Wizard")
+
+[node name="ItemPlacer" parent="." instance=ExtResource("5_q1nou")]

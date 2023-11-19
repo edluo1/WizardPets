@@ -3,7 +3,7 @@ const SHADER_MATERIAL = preload("res://assets/items/PlaceableShaderMaterial.tres
 const SHADER_PARAM_PREVIEW = "PREVIEW"
 const SHADER_PARAM_PLACEABLE = "PLACEABLE"
 
-@onready var sprite3d = $SpriteHolder/Sprite3D as Sprite3D
+@onready var sprite3d = $SpriteHolder/AnimatedSprite3D as AnimatedSprite3D
 @export var placeable_item = Item
 var previewing: bool = false:
 	get:
@@ -21,7 +21,8 @@ var can_place: bool = true:
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	_setup_shader()
+	#_setup_shader()
+	add_to_group("placeable")
 	pass # Replace with function body.
 	
 func _setup_shader() -> void:
@@ -38,4 +39,5 @@ func _update_shader() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	sprite3d.set_texture(placeable_item.itemSprite.texture)
+	
 	pass

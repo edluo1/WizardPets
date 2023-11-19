@@ -1,0 +1,30 @@
+[gd_scene load_steps=6 format=3 uid="uid://bx4n5yxwhp7kw"]
+
+[ext_resource type="PackedScene" uid="uid://damrt7d43tm0t" path="res://scenes/player/player_wizard.tscn" id="1_tt6rv"]
+[ext_resource type="Texture2D" uid="uid://ddd33rsu4bbms" path="res://assets/game_maps/forest_concept.jpg" id="2_6x3vc"]
+
+[sub_resource type="HeightMapShape3D" id="HeightMapShape3D_q35q3"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ms4qm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u3wog"]
+albedo_texture = ExtResource("2_6x3vc")
+
+[node name="forest_level_test" type="Node3D"]
+
+[node name="GridMap" type="GridMap" parent="."]
+metadata/_editor_floor_ = Vector3(0, -3, 0)
+
+[node name="player_wizard" parent="." instance=ExtResource("1_tt6rv")]
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.0094, -5.41793, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(20, 0, 0, 0, 20, 0, 0, 0, 20, 0, 0, 0)
+shape = SubResource("HeightMapShape3D_q35q3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D"]
+transform = Transform3D(50, 0, 0, 0, 50, 0, 0, 0, 50, 0, 0, 0)
+mesh = SubResource("PlaneMesh_ms4qm")
+surface_material_override/0 = SubResource("StandardMaterial3D_u3wog")

@@ -1,0 +1,198 @@
+[gd_scene load_steps=47 format=3 uid="uid://801gm630cumu"]
+
+[ext_resource type="Texture2D" uid="uid://dneyl8h4ohwk5" path="res://assets/game_maps/tiles/store/Storefront_Tile_Walkable_1.png" id="1_rwc6l"]
+[ext_resource type="Texture2D" uid="uid://ddop5nbmwkc6p" path="res://assets/game_maps/tiles/forest/Forest_Tile_Walkable_1.png" id="2_e1ytl"]
+[ext_resource type="Texture2D" uid="uid://bin5j1digb856" path="res://assets/game_maps/tiles/dream/Dreamland_Tile_Walkable_1.png" id="3_aqsxu"]
+[ext_resource type="Texture2D" uid="uid://b3pmpsc07ev0k" path="res://assets/game_maps/tiles/dream/Dreamland_Tile_Transparent_Corner.png" id="4_5yijd"]
+[ext_resource type="Texture2D" uid="uid://ktd2bnphgsau" path="res://assets/game_maps/tiles/dream/Dreamland_Tile_Transparent_Corner_2.png" id="5_2nfjl"]
+[ext_resource type="Texture2D" uid="uid://cix1sn6mbbph6" path="res://assets/game_maps/tiles/dream/Dreamland_Tile_Transparent_Straight_1.png" id="6_qqyuc"]
+[ext_resource type="Texture2D" uid="uid://6jtq2pwplj8n" path="res://assets/game_maps/tiles/dream/Dreamland_Tile_Transparent_Straight_2.png" id="7_oa4un"]
+[ext_resource type="Texture2D" uid="uid://dweqwstwc1qeu" path="res://assets/game_maps/tiles/dream/Dreamland_Tile_Unwalkable.png" id="8_ar1tl"]
+[ext_resource type="Texture2D" uid="uid://mxbqc1wnikbb" path="res://assets/game_maps/tiles/desert/Desert_Tile_Walkable_1.png" id="9_e47ur"]
+[ext_resource type="Texture2D" uid="uid://cnxjoh471oxgv" path="res://assets/game_maps/tiles/desert/Desert_Tile_UnWalkable_1.png" id="10_vjhr5"]
+[ext_resource type="Texture2D" uid="uid://b1j8jxxg5ugup" path="res://assets/game_maps/tiles/ocean/Seascape_Tile_Walkable_1.png" id="11_7ni7a"]
+[ext_resource type="Texture2D" uid="uid://cg0wakv5rbgow" path="res://assets/game_maps/tiles/ocean/Seascape_Tile_Unwalkable_1.png" id="12_r5v2r"]
+[ext_resource type="Texture2D" uid="uid://dtkirokbfqn3" path="res://assets/game_maps/tiles/forest/Forest_Tile_UnWalkable_2.png" id="13_j1jmg"]
+[ext_resource type="Texture2D" uid="uid://l2g5lm5y6ovm" path="res://assets/game_maps/tiles/forest/Forest_Tile_UnWalkable_1.png" id="14_4qvrt"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qeauo"]
+albedo_texture = ExtResource("1_rwc6l")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_o6wwd"]
+material = SubResource("StandardMaterial3D_qeauo")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_desm8"]
+albedo_texture = ExtResource("2_e1ytl")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ik3vr"]
+material = SubResource("StandardMaterial3D_desm8")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_btau2"]
+albedo_texture = ExtResource("3_aqsxu")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_7ayx8"]
+material = SubResource("StandardMaterial3D_btau2")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x1ele"]
+transparency = 1
+albedo_texture = ExtResource("4_5yijd")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_2tfnk"]
+material = SubResource("StandardMaterial3D_x1ele")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_t0jpn"]
+transparency = 1
+albedo_texture = ExtResource("5_2nfjl")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_q6wqa"]
+material = SubResource("StandardMaterial3D_t0jpn")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_avjp6"]
+transparency = 1
+albedo_texture = ExtResource("6_qqyuc")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_8wehe"]
+material = SubResource("StandardMaterial3D_avjp6")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xki6i"]
+transparency = 1
+albedo_texture = ExtResource("7_oa4un")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_6hvkv"]
+material = SubResource("StandardMaterial3D_xki6i")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5x7du"]
+albedo_texture = ExtResource("8_ar1tl")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_mohcw"]
+material = SubResource("StandardMaterial3D_5x7du")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4w3of"]
+albedo_texture = ExtResource("9_e47ur")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_d3yl0"]
+material = SubResource("StandardMaterial3D_4w3of")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ir4a7"]
+albedo_texture = ExtResource("10_vjhr5")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_smsqd"]
+material = SubResource("StandardMaterial3D_ir4a7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2l5of"]
+albedo_texture = ExtResource("11_7ni7a")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_cwqs3"]
+material = SubResource("StandardMaterial3D_2l5of")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mgxbc"]
+albedo_texture = ExtResource("12_r5v2r")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_v7lj2"]
+material = SubResource("StandardMaterial3D_mgxbc")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yawko"]
+albedo_texture = ExtResource("13_j1jmg")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_w81ok"]
+material = SubResource("StandardMaterial3D_yawko")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_vn3if"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_856jg"]
+transparency = 1
+albedo_texture = ExtResource("14_4qvrt")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_yoh8n"]
+material = SubResource("StandardMaterial3D_856jg")
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_qnrx5"]
+load_path = "res://.godot/imported/Forest_Tile_UnWalkable_1.png-9aa8d9e17884310ed3520a16c6cb5348.s3tc.ctex"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_x0rjy"]
+transparency = 1
+albedo_color = Color(1, 1, 1, 0)
+albedo_texture = SubResource("CompressedTexture2D_qnrx5")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_36hkh"]
+material = SubResource("StandardMaterial3D_x0rjy")
+
+[node name="tile_library" type="Node3D"]
+
+[node name="StoreFloor" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.63227, 0.0025034, -0.00391519)
+mesh = SubResource("PlaneMesh_o6wwd")
+
+[node name="ForestWalk1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00163364, 0.0025034, -0.00391519)
+mesh = SubResource("PlaneMesh_ik3vr")
+
+[node name="DreamWalk1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.86522, 0.0025034, -0.0703437)
+mesh = SubResource("PlaneMesh_7ayx8")
+
+[node name="DreamWalk2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.86449, -0.00304389, -2.57368)
+mesh = SubResource("PlaneMesh_2tfnk")
+
+[node name="DreamWalk3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.86449, -0.00304389, -4.86597)
+mesh = SubResource("PlaneMesh_q6wqa")
+
+[node name="DreamWalk4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.86449, -0.00304389, -7.47496)
+mesh = SubResource("PlaneMesh_8wehe")
+
+[node name="DreamWalk5" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.86449, -0.00304389, -10.1323)
+mesh = SubResource("PlaneMesh_6hvkv")
+
+[node name="DreamBack1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.86522, 0.0025034, 2.33789)
+mesh = SubResource("PlaneMesh_mohcw")
+
+[node name="DesertWalk1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.65037, 0.0025034, -0.0703437)
+mesh = SubResource("PlaneMesh_d3yl0")
+
+[node name="DesertBack1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.74927, 0.0025034, 2.33789)
+mesh = SubResource("PlaneMesh_smsqd")
+
+[node name="OceanWalk1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.11458, 0.0025034, -0.0703437)
+mesh = SubResource("PlaneMesh_cwqs3")
+
+[node name="OceanBack1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.21216, 0.00458765, 2.3289)
+mesh = SubResource("PlaneMesh_v7lj2")
+
+[node name="ForestBlocker1" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0163342, -0.00371945, 2.32341)
+mesh = SubResource("PlaneMesh_w81ok")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="ForestBlocker1"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ForestBlocker1/StaticBody3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("BoxShape3D_vn3if")
+
+[node name="ForestBlocker2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0163342, -0.00371945, 5.07846)
+mesh = SubResource("PlaneMesh_yoh8n")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="ForestBlocker2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="ForestBlocker2/StaticBody3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("BoxShape3D_vn3if")
+
+[node name="InvisiWall" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.73959, -0.00371945, 2.71918)
+mesh = SubResource("PlaneMesh_36hkh")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="InvisiWall"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InvisiWall/StaticBody3D"]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+shape = SubResource("BoxShape3D_vn3if")

@@ -1,4 +1,5 @@
-class_name WizardWalk extends CharacterBody3D
+class_name WizardWalk
+extends CharacterBody3D
 
 @onready var animationPlayer = $Sprite_Base/AnimationPlayer
 @onready var wizardSprite = $Sprite_Base/SpriteHolder/WizardSprite
@@ -8,11 +9,16 @@ var eastbound = true
 @export var hasBackpack: bool
 @export var SPEED = 2.5
 @export var bubbles: Array[BubbleSprite]
+var moving: bool
+
+func _ready():
+	add_to_group("wizard")
 
 func _physics_process(delta):
 	var input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
+		moving = true
 		animationPlayer.play("Walk")
 		velocity.x = direction.x * SPEED
 		velocity.z = direction.z * SPEED
@@ -25,6 +31,7 @@ func _physics_process(delta):
 		elif direction.x < -0.2:
 			eastbound = false
 	else:
+		moving = false
 		animationPlayer.play("Idle")
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)

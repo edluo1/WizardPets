@@ -1,3 +1,4 @@
+class_name PetWalk
 extends CharacterBody3D
 
 var data: PetData
@@ -5,7 +6,7 @@ var data: PetData
 const SPEED = 5.0
 const WAIT_TIME = 3.0
 const JUMP_HEIGHT = 2.0
-const MOVE_RADIUS = 4.0
+const FLEE_LIMIT = 1.0
 
 enum S
 {
@@ -18,6 +19,10 @@ enum S
 	trapped,
 	fleeing
 }
+@export var holdingPen: bool = false
+var MOVE_RADIUS = 4.0
+var CAUTION_RADIUS = 4.0
+var BAIT_RADIUS = 4.0
 var state = S.waiting
 var anchorx = 0.0
 var anchorz = 0.0
@@ -27,15 +32,28 @@ var probNoise = 1
 var initState = false
 var startPos:Vector3
 var endPos:Vector3
+var alertBuildup:float = 0
 
 func _ready():
-	print("pet loaded")
+	var resource = "res://assets/audio/creatures/"+Res.ID.find_key(data.ID)+".wav"
+	var cry = load("res://assets/audio/creatures/"+Res.ID.find_key(data.ID)+".wav")
+	$AudioStreamPlayer3D.stream = cry
 
 func _process(delta):
+	if holdingPen:
+		MOVE_RADIUS = 0.5
 	match state:
 		S.waiting:
 			countdown -= delta
-			##TODO: shift to alerted or attracted based on proximity to objects
+			if !holdingPen:
+				var root = get_tree().root
+				var wizard = get_tree().get_nodes_in_group("wizard")[0]
+				var wizPos = wizard.global_position
+				if global_position.distance_squared_to(wizPos) < CAUTION_RADIUS * CAUTION_RADIUS && wizard.moving && data.reaction != PetData.ReactionStyle.passive:
+					state = S.alerted
+					return
+				else:
+					var baits = get_tree().get_nodes_in_group("Placeable")
 			if countdown <= 0:
 				initState = true
 				if (randi() % (probMove + probNoise)) - probMove > 0:
@@ -50,7 +68,7 @@ func _process(delta):
 			if initState:
 				initState = false
 				countdown = 2.0
-				##TODO: make the noises
+				$AudioStreamPlayer3D.play()
 			countdown -= delta
 			if countdown <= 0:
 				countdown = WAIT_TIME

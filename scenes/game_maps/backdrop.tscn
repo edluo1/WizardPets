@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgl0pbtp6kuwa"]
+
+[ext_resource type="Script" path="res://scripts/items/backdrop.gd" id="1_qjy47"]
+[ext_resource type="Texture2D" uid="uid://b0yecvqrba70g" path="res://assets/game_maps/dream/Bubble_Blue.png" id="2_uh31p"]
+
+[sub_resource type="Animation" id="Animation_uqjx1"]
+resource_name = "Float"
+length = 2.0
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, -0.1, 0, 0.5, 1, 0, 0.1, 0, 1, 1, 0, -0.1, 0, 1.5, 1, 0, 0.1, 0, 2, 1, 0, -0.1, 0)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_433f5"]
+_data = {
+"Float": SubResource("Animation_uqjx1")
+}
+
+[node name="Backdrop" type="Node3D"]
+script = ExtResource("1_qjy47")
+
+[node name="Sprite_Base" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, -0.1, 0)
+script = ExtResource("1_qjy47")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite_Base"]
+libraries = {
+"": SubResource("AnimationLibrary_433f5")
+}
+
+[node name="SpriteHolder" type="Node3D" parent="Sprite_Base"]
+transform = Transform3D(1, 0, 0, 0, 1.01, 0, 0, 0, 1, 0, 0.835, 0)
+
+[node name="Sprite" type="Sprite3D" parent="Sprite_Base/SpriteHolder"]
+transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, 0, 0, 0)
+texture = ExtResource("2_uh31p")

@@ -1,6 +1,6 @@
+class_name Item
 extends Node
 
-class_name Item
 
 enum ItemType {
 	PLACEABLE = 1,

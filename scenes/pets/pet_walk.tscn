@@ -1,10 +1,22 @@
-[gd_scene load_steps=7 format=3 uid="uid://dey8il6ro51hd"]
+[gd_scene load_steps=8 format=3 uid="uid://dey8il6ro51hd"]
 
 [ext_resource type="Script" path="res://scripts/pets/pet_walk.gd" id="1_umsjc"]
 [ext_resource type="SpriteFrames" uid="uid://bbl5mot0w2jtg" path="res://assets/Creatures/PetFrames.tres" id="2_202dn"]
+[ext_resource type="SpriteFrames" uid="uid://cude6kyut2hx4" path="res://assets/items/food/EatingFoodSprites.tres" id="3_m4exn"]
+
+[sub_resource type="Animation" id="Animation_uqjx1"]
+resource_name = "Float"
+length = 2.0
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpriteHolder")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0, 0.505, 0, 0.4, 1, 0, 0.48, 0, 0.8, 1, 0, 0.505, 0, 1.2, 1, 0, 0.48, 0, 1.6, 1, 0, 0.505, 0, 2, 1, 0, 0.48, 0)
 
 [sub_resource type="Animation" id="Animation_do4nc"]
-resource_name = "Idle"
+resource_name = "Ground_Idle"
 length = 4.0
 tracks/0/type = "position_3d"
 tracks/0/imported = false
@@ -21,28 +33,10 @@ tracks/1/interp = 2
 tracks/1/loop_wrap = true
 tracks/1/keys = PackedFloat32Array(0, 1, 1, 1.01, 1, 1, 1, 1, 0.99, 1, 2, 1, 1, 1.01, 1, 3, 1, 1, 0.99, 1, 4, 1, 1, 1.01, 1)
 
-[sub_resource type="Animation" id="Animation_uqjx1"]
-resource_name = "Walk"
-length = 2.0
-tracks/0/type = "position_3d"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("SpriteHolder")
-tracks/0/interp = 2
-tracks/0/loop_wrap = true
-tracks/0/keys = PackedFloat32Array(0, 1, 0, 0.505, 0, 0.2, 1, 0, 0.48, 0, 0.4, 1, 0, 0.505, 0, 0.6, 1, 0, 0.48, 0, 0.8, 1, 0, 0.505, 0, 1, 1, 0, 0.48, 0, 1.2, 1, 0, 0.505, 0, 1.4, 1, 0, 0.48, 0, 1.6, 1, 0, 0.505, 0, 1.8, 1, 0, 0.48, 0, 2, 1, 0, 0.505, 0)
-tracks/1/type = "scale_3d"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("SpriteHolder")
-tracks/1/interp = 2
-tracks/1/loop_wrap = true
-tracks/1/keys = PackedFloat32Array(0, 1, 1, 1.01, 1, 0.2, 1, 1, 0.95, 1, 0.4, 1, 1, 1.01, 1, 0.6, 1, 1, 0.95, 1, 0.8, 1, 1, 1.01, 1, 1, 1, 1, 0.95, 1, 1.2, 1, 1, 1.01, 1, 1.4, 1, 1, 0.95, 1, 1.6, 1, 1, 1.01, 1, 1.8, 1, 1, 0.95, 1, 2, 1, 1, 1.01, 1)
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_433f5"]
 _data = {
-"Idle": SubResource("Animation_do4nc"),
-"Walk": SubResource("Animation_uqjx1")
+"Float": SubResource("Animation_uqjx1"),
+"Ground_Idle": SubResource("Animation_do4nc")
 }
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xx636"]
@@ -62,12 +56,19 @@ libraries = {
 }
 
 [node name="SpriteHolder" type="Node3D" parent="Sprite_Base"]
-transform = Transform3D(1, 0, 0, 0, 1.00296, 0, 0, 0, 1, 0, 0.50148, 0)
+transform = Transform3D(1, 0, 0, 0, 1.01, 0, 0, 0, 1, 0, 0.505, 0)
 
 [node name="PetSprite" type="AnimatedSprite3D" parent="Sprite_Base/SpriteHolder"]
 transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, 0, 0, 0)
+flip_h = true
 sprite_frames = ExtResource("2_202dn")
-animation = &"moss_1"
+animation = &"sheep_eat"
+
+[node name="FoodSprite" type="AnimatedSprite3D" parent="Sprite_Base/SpriteHolder"]
+transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, 0.0787662, -0.124156, 0.00203706)
+sorting_offset = 0.5
+sprite_frames = ExtResource("3_m4exn")
+animation = &"lettuce"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.25, 0)

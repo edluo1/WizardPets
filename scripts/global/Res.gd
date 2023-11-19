@@ -1,5 +1,6 @@
 class_name Res
 extends Object
+
 enum ID
 {
 	empty,

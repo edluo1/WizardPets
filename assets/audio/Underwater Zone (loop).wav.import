@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://clfx4m61v5e2m"
+path="res://.godot/imported/Underwater Zone (loop).wav-a6096a57fff281138a0b86fec2713ccb.sample"
+
+[deps]
+
+source_file="res://assets/audio/Underwater Zone (loop).wav"
+dest_files=["res://.godot/imported/Underwater Zone (loop).wav-a6096a57fff281138a0b86fec2713ccb.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

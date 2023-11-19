@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/player/wizard_walk.gd" id="1_5kdkn"]
 [ext_resource type="SpriteFrames" uid="uid://nqs8vnoes28s" path="res://assets/player/wizard_sprites.tres" id="2_wonjj"]
 [ext_resource type="PackedScene" uid="uid://bonhovjbufpck" path="res://scenes/ui/Inventory.tscn" id="3_rcimo"]
-[ext_resource type="PackedScene" uid="uid://dw11r4axpgcnv" path="res://scenes/player/ItemPlacer.tscn" id="4_krv0b"]
+[ext_resource type="PackedScene" uid="uid://enhig5psrqcx" path="res://scenes/player/ItemPlacer.tscn" id="4_krv0b"]
 
 [sub_resource type="Animation" id="Animation_do4nc"]
 resource_name = "Idle"
@@ -49,8 +49,9 @@ _data = {
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_xx636"]
 
-[node name="Wizard" type="CharacterBody3D"]
+[node name="Wizard" type="CharacterBody3D" groups=["wizard"]]
 script = ExtResource("1_5kdkn")
+hasBackpack = true
 
 [node name="Sprite_Base" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0)
@@ -77,7 +78,5 @@ shape = SubResource("BoxShape3D_xx636")
 
 [node name="Inventory" parent="." instance=ExtResource("3_rcimo")]
 
-[node name="ItemPlacer" parent="." node_paths=PackedStringArray("player") instance=ExtResource("4_krv0b")]
-player = NodePath("..")
-
-[connection signal="item_selected" from="Inventory" to="." method="_on_inventory_item_selected"]
+[node name="ItemPlacer" parent="." instance=ExtResource("4_krv0b")]
+transform = Transform3D(0.80402, 0, 0, 0, 1.14384, 0, 0, 0, 0, 0, 0, 0)

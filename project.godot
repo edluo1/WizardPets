@@ -91,7 +91,7 @@ pause_button={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://dialogue/test.dialogue", "res://dialogue/test_purchase_stuff.dialogue", "res://dialogue/day2.dialogue", "res://dialogue/day3.dialogue", "res://dialogue/AngelGetEnding.dialogue")
+locale/translations_pot_files=PackedStringArray("res://dialogue/test.dialogue", "res://dialogue/test_purchase_stuff.dialogue", "res://dialogue/day2.dialogue", "res://dialogue/day3.dialogue", "res://dialogue/AngelGetEnding.dialogue", "res://dialogue/extremely_basic_tutorial.dialogue")
 
 [rendering]
 

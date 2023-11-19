@@ -17,5 +17,5 @@ func _on_static_body_3d_input_event(camera, event, position, normal, shape_idx):
 		if event.button_index == MOUSE_BUTTON_LEFT && event.pressed:
 			print("clicked on %s" % objectName)
 			emit_signal("clickable_selected", objectName)
-	elif event is InputEventMouseMotion:
-		print("hovered over")
+	#elif event is InputEventMouseMotion:
+	#	print("hovered over")

@@ -12,7 +12,6 @@ func _process(delta):
 	pass
 
 func playMusic(musicNum: int):
-	return
 	selectedTrack = musicNum
 	if currentlyPlaying:
 		var tween = get_tree().create_tween()

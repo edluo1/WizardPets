@@ -16,7 +16,7 @@ func playMusic(musicNum: int):
 	selectedTrack = musicNum
 	if currentlyPlaying:
 		var tween = get_tree().create_tween()
-		tween.tween_property(currentlyPlaying, "volume_db", -80, 3.0)
+		tween.tween_property(currentlyPlaying, "volume_db", -80, 2.0)
 		tween.tween_callback(_loadNewTrack)
 	else:
 		_loadNewTrack()
@@ -24,6 +24,7 @@ func playMusic(musicNum: int):
 func _loadNewTrack():
 	if currentlyPlaying:
 		currentlyPlaying.stop()
+		
 	currentlyPlaying = introStreamers[selectedTrack]
 	currentlyPlaying.play()
 	await introStreamers[selectedTrack].finished

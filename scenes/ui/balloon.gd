@@ -37,7 +37,7 @@ var dialogue_line: DialogueLine:
 		character_label.visible = not dialogue_line.character.is_empty()
 		character_label.text = tr(dialogue_line.character, "dialogue")
 		var portrait_path: String = "res://assets/portraits/%s.png" % dialogue_line.character.to_lower()
-		if FileAccess.file_exists(portrait_path):
+		if ResourceLoader.exists(portrait_path):
 			portrait.texture = load(portrait_path)
 		else:
 			portrait.texture = null
@@ -45,11 +45,11 @@ var dialogue_line: DialogueLine:
 		var random_line = randi() % 6 + 1
 		if dialogue_line.character.to_lower() == "wiz":
 			var wiz_image_path: String = "res://assets/customers/wiz/%d.png" % random_line
-			if FileAccess.file_exists(wiz_image_path):
+			if ResourceLoader.exists(wiz_image_path):
 				main_wiz_image.texture = load(wiz_image_path)
 		else:
 			var char_image_path: String = "res://assets/customers/%s/%d.png" % [dialogue_line.character.to_lower(), random_line]
-			if FileAccess.file_exists(char_image_path):
+			if ResourceLoader.exists(char_image_path):
 				partner_image.texture = load(char_image_path)
 
 		dialogue_label.hide()

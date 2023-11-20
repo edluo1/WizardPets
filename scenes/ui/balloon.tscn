@@ -144,6 +144,7 @@ text = "Response example"
 unique_name_in_owner = true
 light_mask = 33
 z_index = -1
+layout_mode = 0
 offset_left = 568.0
 offset_top = -471.0
 offset_right = 3068.0
@@ -155,6 +156,7 @@ expand_mode = 1
 [node name="PartnerImage" type="TextureRect" parent="Balloon"]
 unique_name_in_owner = true
 z_index = -1
+layout_mode = 0
 offset_left = 94.0
 offset_top = -438.0
 offset_right = 2594.0

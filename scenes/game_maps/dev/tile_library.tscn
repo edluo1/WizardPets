@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dneyl8h4ohwk5" path="res://assets/game_maps/tiles/store/Storefront_Tile_Walkable_1.png" id="1_rwc6l"]
 [ext_resource type="Texture2D" uid="uid://ddop5nbmwkc6p" path="res://assets/game_maps/tiles/forest/Forest_Tile_Walkable_1.png" id="2_e1ytl"]
-[ext_resource type="Texture2D" uid="uid://c0p7nukgrvsqd" path="res://assets/game_maps/tiles/dream/Dreamland_Tile_Walkable_1.png" id="3_aqsxu"]
+[ext_resource type="Texture2D" uid="uid://bin5j1digb856" path="res://assets/game_maps/tiles/dream/Dreamland_Tile_Walkable_1.png" id="3_aqsxu"]
 [ext_resource type="Texture2D" uid="uid://b3pmpsc07ev0k" path="res://assets/game_maps/tiles/dream/Dreamland_Tile_Transparent_Corner.png" id="4_5yijd"]
 [ext_resource type="Texture2D" uid="uid://ktd2bnphgsau" path="res://assets/game_maps/tiles/dream/Dreamland_Tile_Transparent_Corner_2.png" id="5_2nfjl"]
 [ext_resource type="Texture2D" uid="uid://cix1sn6mbbph6" path="res://assets/game_maps/tiles/dream/Dreamland_Tile_Transparent_Straight_1.png" id="6_qqyuc"]

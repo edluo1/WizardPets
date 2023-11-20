@@ -15,6 +15,12 @@ func _ready():
 	add_to_group("wizard")
 
 func _physics_process(delta):
+	
+	for i in bubbles.size():
+		if _DataMgr.bubblePets.size() > i && _DataMgr.bubblePets[i].ID != Res.ID.empty:
+			bubbles[i].SetContents(_DataMgr.bubblePets[i].ID)
+		else:
+			bubbles[i].SetContents(Res.ID.empty)
 	var input_dir = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:

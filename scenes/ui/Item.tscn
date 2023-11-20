@@ -8,9 +8,7 @@ z_index = 1
 script = ExtResource("1_u7pdm")
 
 [node name="ItemSprite" type="TextureRect" parent="."]
-custom_minimum_size = Vector2(100, 100)
-offset_right = 100.0
-offset_bottom = 100.0
+offset_right = 40.0
+offset_bottom = 40.0
 mouse_filter = 2
 texture = ExtResource("1_s1li7")
-expand_mode = 1

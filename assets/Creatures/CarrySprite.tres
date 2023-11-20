@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=21 format=3 uid="uid://dfccfh56mo0na"]
+[gd_resource type="SpriteFrames" load_steps=22 format=3 uid="uid://dfccfh56mo0na"]
 
 [ext_resource type="Texture2D" uid="uid://cjvx54x7dnjm5" path="res://assets/Creatures/angel/small.png" id="1_uyl1u"]
 [ext_resource type="Texture2D" uid="uid://bwdrfj5ojvcfa" path="res://assets/Creatures/bear/small.png" id="2_uy7w2"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cy2uq5mug5584" path="res://assets/Creatures/fairy/small.png" id="4_n3j6u"]
 [ext_resource type="Texture2D" uid="uid://cu73gujxvq508" path="res://assets/Creatures/plushbie/small.png" id="5_phwq8"]
 [ext_resource type="Texture2D" uid="uid://fiueae5237d0" path="res://assets/Creatures/doll/small.png" id="5_qlfnq"]
+[ext_resource type="Texture2D" uid="uid://8y15m6s1i47p" path="res://assets/items/Empty.png" id="6_6i6rf"]
 [ext_resource type="Texture2D" uid="uid://btuhcabgkoacd" path="res://assets/Creatures/eyes/small.png" id="6_u0rl6"]
 [ext_resource type="Texture2D" uid="uid://cuokah538asc0" path="res://assets/Creatures/shrump/small.png" id="7_saybb"]
 [ext_resource type="Texture2D" uid="uid://dhl28hbxihagb" path="res://assets/Creatures/guard/small.png" id="8_l0cua"]
@@ -61,6 +62,14 @@ animations = [{
 }],
 "loop": true,
 "name": &"doll",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_6i6rf")
+}],
+"loop": true,
+"name": &"empty",
 "speed": 5.0
 }, {
 "frames": [{

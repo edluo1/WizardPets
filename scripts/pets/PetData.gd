@@ -20,6 +20,7 @@ enum AnimationStyle{cryOnly, backnforth}
 @export var animation: AnimationStyle
 @export var eatX: int = 0
 @export var eatY: int = 0
+var fedToday = false
 
 func feed_strength_food(value: int) -> void:
 	strength += value

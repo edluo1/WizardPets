@@ -23,7 +23,15 @@ var can_place: bool = true:
 func _ready():
 	#_setup_shader()
 	add_to_group("placeable")
-	pass # Replace with function body.
+	match placeable_item.item_name:
+		"Lettuce":
+			setImage("lettuce")
+		"Meat":
+			setImage("meat")
+		"Honey":
+			setImage("honey")
+		"Pet Trap":
+			setImage("trap_open")
 	
 func _setup_shader() -> void:
 	# sprite3d.material_override = SHADER_MATERIAL.duplicate()
@@ -33,11 +41,14 @@ func _update_shader() -> void:
 	if sprite3d.material_override == null:
 		return
 	
+func setImage(name: String):
+	sprite3d.play(name)
+	
 	# sprite3d.material_override.set_shader_parameter(SHADER_PARAM_PREVIEW, previewing)
 	# sprite3d.material_override.set_shader_parameter(SHADER_PARAM_PLACEABLE, can_place)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	sprite3d.set_texture(placeable_item.itemSprite.texture)
+	#sprite3d.set_texture(placeable_item.itemSprite.texture)
 	
 	pass

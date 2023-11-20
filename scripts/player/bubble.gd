@@ -26,7 +26,5 @@ func _process(delta):
 			global_position += direction
 
 func SetContents(pet: Res.ID):
-	visible = false
-	if pet != Res.ID.empty:
-		visible = true
-		creatureSprite.play(Res.ID.keys()[pet])
+	$SpriteHolder/SpriteBubble.visible = pet != Res.ID.empty
+	creatureSprite.play(Res.ID.keys()[pet])

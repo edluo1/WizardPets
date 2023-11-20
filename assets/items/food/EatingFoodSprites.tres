@@ -36,6 +36,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("5_tuccm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_fu4g4")
 }],
 "loop": false,
 "name": &"honey",
@@ -53,6 +56,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("9_sae8c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_fu4g4")
 }],
 "loop": false,
 "name": &"lettuce",
@@ -70,6 +76,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("13_xpdvd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_fu4g4")
 }],
 "loop": false,
 "name": &"meat",

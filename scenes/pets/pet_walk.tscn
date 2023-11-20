@@ -65,10 +65,10 @@ sprite_frames = ExtResource("2_202dn")
 animation = &"sheep_eat"
 
 [node name="FoodSprite" type="AnimatedSprite3D" parent="Sprite_Base/SpriteHolder"]
-transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, 0.0787662, -0.124156, 0.00203706)
+transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, 0.0787662, -0.124156, 0.00203705)
 sorting_offset = 0.5
 sprite_frames = ExtResource("3_m4exn")
-animation = &"lettuce"
+animation = &"meat"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.25, 0)

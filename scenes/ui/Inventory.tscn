@@ -78,6 +78,7 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_dthlo")
 script = ExtResource("3_m41kx")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="InventoryUI/GridContainer/Slot2"]
+layout_mode = 0
 offset_left = 18.0
 offset_top = 75.0
 offset_right = 58.0
@@ -91,6 +92,7 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_dthlo")
 script = ExtResource("3_m41kx")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="InventoryUI/GridContainer/Slot3"]
+layout_mode = 0
 offset_left = 18.0
 offset_top = 75.0
 offset_right = 58.0
@@ -104,6 +106,7 @@ theme_override_styles/panel = SubResource("StyleBoxTexture_dthlo")
 script = ExtResource("3_m41kx")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="InventoryUI/GridContainer/Slot4"]
+layout_mode = 0
 offset_left = 18.0
 offset_top = 75.0
 offset_right = 58.0

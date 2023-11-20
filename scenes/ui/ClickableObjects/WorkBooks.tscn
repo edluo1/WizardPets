@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://3rfqd5lb5v" path="res://assets/game_maps/storefront/Work_UI.png" id="2_nx48s"]
 
 [node name="ClickableObject" instance=ExtResource("1_hmkrk")]
+objectName = "WorkBooks"
 
 [node name="CollisionPolygon3D" parent="StaticBody3D" index="0"]
 polygon = PackedVector2Array(2.35351, 4.45643, 5.83095, 3.29617, 6.10297, 2.36681, 5.55781, 1.95391, 5.70247, 1.11075, 5.2617, 0.737666, 6.6303, -1.94939, 3.23615, -5.55615, -3.38109, -5.80314, -3.39884, -4.79976, -3.4624, -3.64984, -3.24598, 0.155228, -2.43587, 2.25906)

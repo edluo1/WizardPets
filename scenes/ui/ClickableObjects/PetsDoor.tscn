@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://b4hxiqnynmeky" path="res://assets/game_maps/storefront/Pets_UI.png" id="2_h88iq"]
 
 [node name="ClickableObject" instance=ExtResource("1_sdyxa")]
+objectName = "PetsDoor"
 
 [node name="CollisionPolygon3D" parent="StaticBody3D" index="0"]
 depth = 2.0

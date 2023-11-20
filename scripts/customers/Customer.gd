@@ -16,8 +16,9 @@ var at_order_counter = true
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta):
-	if at_order_counter:
-		var balloon = load("res://scenes/ui/balloon.tscn").instantiate()
-		get_tree().current_scene.add_child(balloon)
-		balloon.start(load("res://dialogue/day3.dialogue"), "start")
-		at_order_counter = false
+	pass
+	#if at_order_counter:
+		#var balloon = load("res://scenes/ui/balloon.tscn").instantiate()
+		#get_tree().current_scene.add_child(balloon)
+		# balloon.start(load("res://dialogue/day3.dialogue"), "start")
+		#at_order_counter = false

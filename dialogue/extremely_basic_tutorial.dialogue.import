@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_11"
+type="Resource"
+uid="uid://cv37ayoxugoht"
+path="res://.godot/imported/extremely_basic_tutorial.dialogue-4e60767f308c0557968dbe1503e19148.tres"
+
+[deps]
+
+source_file="res://dialogue/extremely_basic_tutorial.dialogue"
+dest_files=["res://.godot/imported/extremely_basic_tutorial.dialogue-4e60767f308c0557968dbe1503e19148.tres"]
+
+[params]
+
+defaults=true

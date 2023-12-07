@@ -1,8 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://d4rq43lf4f3t"]
+[gd_scene load_steps=12 format=3 uid="uid://d4rq43lf4f3t"]
 
 [ext_resource type="Script" path="res://scripts/global/MusicManager.gd" id="1_81akq"]
 [ext_resource type="AudioStream" uid="uid://ck07t63jnh337" path="res://assets/audio/Desert Zone (intro) 90 BPM.wav" id="2_d4a2o"]
+[ext_resource type="AudioStream" uid="uid://clslst8ecnquo" path="res://assets/audio/Shop Music (intro).wav" id="2_vx5v7"]
 [ext_resource type="AudioStream" uid="uid://cue4lsf5f1vdg" path="res://assets/audio/Desert Zone (loop) 90 BPM.wav" id="3_5lwag"]
+[ext_resource type="AudioStream" uid="uid://boqqq04qa0gx7" path="res://assets/audio/Shop Music (loop).wav" id="3_iqdjo"]
 [ext_resource type="AudioStream" uid="uid://c6copeqk3fbpf" path="res://assets/audio/Dreams (intro) 92 BPM.wav" id="4_elven"]
 [ext_resource type="AudioStream" uid="uid://dmqenrfrcwee8" path="res://assets/audio/Dreams (loop) 92 BPM.wav" id="5_86wkr"]
 [ext_resource type="AudioStream" uid="uid://djb617ungf0or" path="res://assets/audio/Underwater Zone (intro).wav" id="6_nx11v"]
@@ -12,8 +14,14 @@
 
 [node name="MusicManager" type="Node" node_paths=PackedStringArray("introStreamers", "musicStreamers")]
 script = ExtResource("1_81akq")
-introStreamers = [null, NodePath("ForestStart"), NodePath("DesertStart"), NodePath("OceanStart"), NodePath("DreamStart")]
-musicStreamers = [null, NodePath("ForestMusic"), NodePath("DesertMusic"), NodePath("OceanMusic"), NodePath("DreamMusic")]
+introStreamers = [NodePath("ShopStart"), NodePath("ForestStart"), NodePath("DesertStart"), NodePath("OceanStart"), NodePath("DreamStart")]
+musicStreamers = [NodePath("ShopMusic"), NodePath("ForestMusic"), NodePath("DesertMusic"), NodePath("OceanMusic"), NodePath("DreamMusic")]
+
+[node name="ShopStart" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_vx5v7")
+
+[node name="ShopMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_iqdjo")
 
 [node name="DesertStart" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_d4a2o")

@@ -1,10 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://bonhovjbufpck"]
+[gd_scene load_steps=11 format=3 uid="uid://bonhovjbufpck"]
 
 [ext_resource type="Script" path="res://scripts/ui/Inventory.gd" id="1_hjrgg"]
 [ext_resource type="Texture2D" uid="uid://rnwjatd7msna" path="res://assets/ui/item_bag/000.png" id="2_gj275"]
 [ext_resource type="Texture2D" uid="uid://ckrih76frma52" path="res://assets/ui/item_bag/002.png" id="3_f207p"]
 [ext_resource type="Script" path="res://scripts/ui/Slot.gd" id="3_m41kx"]
 [ext_resource type="Texture2D" uid="uid://cyirw0b8ap2ir" path="res://assets/ui/item_bag/001.png" id="4_m4eqd"]
+[ext_resource type="Texture2D" uid="uid://b5m8al8qe4vm0" path="res://assets/items/food/leaf 1.png" id="6_u1rcy"]
+[ext_resource type="Texture2D" uid="uid://bqhls0jxwy4p8" path="res://assets/items/food/meat (1).png" id="7_dl728"]
+[ext_resource type="Texture2D" uid="uid://bvvowupca6myo" path="res://assets/items/food/Honey 1.png" id="8_nx4xq"]
+[ext_resource type="Texture2D" uid="uid://dj5t68yewsjpq" path="res://assets/items/trap/alert.png" id="9_l47ma"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dthlo"]
 texture = ExtResource("4_m4eqd")
@@ -71,6 +75,13 @@ offset_right = 58.0
 offset_bottom = 115.0
 text = "0"
 
+[node name="TextureButton" type="TextureButton" parent="InventoryUI/GridContainer/Slot1"]
+layout_mode = 0
+offset_right = 300.0
+offset_bottom = 300.0
+scale = Vector2(0.35, 0.35)
+texture_normal = ExtResource("6_u1rcy")
+
 [node name="Slot2" type="Panel" parent="InventoryUI/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
@@ -84,6 +95,13 @@ offset_top = 75.0
 offset_right = 58.0
 offset_bottom = 115.0
 text = "0"
+
+[node name="TextureButton" type="TextureButton" parent="InventoryUI/GridContainer/Slot2"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.35, 0.35)
+texture_normal = ExtResource("7_dl728")
 
 [node name="Slot3" type="Panel" parent="InventoryUI/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
@@ -99,6 +117,13 @@ offset_right = 58.0
 offset_bottom = 115.0
 text = "0"
 
+[node name="TextureButton" type="TextureButton" parent="InventoryUI/GridContainer/Slot3"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.35, 0.35)
+texture_normal = ExtResource("8_nx4xq")
+
 [node name="Slot4" type="Panel" parent="InventoryUI/GridContainer"]
 custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
@@ -112,3 +137,10 @@ offset_top = 75.0
 offset_right = 58.0
 offset_bottom = 115.0
 text = "0"
+
+[node name="TextureButton" type="TextureButton" parent="InventoryUI/GridContainer/Slot4"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.17, 0.17)
+texture_normal = ExtResource("9_l47ma")

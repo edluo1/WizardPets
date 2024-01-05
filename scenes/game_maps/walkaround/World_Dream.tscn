@@ -71,7 +71,7 @@ libraries = {
 next/slide = &"slide"
 
 [node name="TestPetSpawner" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.10067, 0, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0939064, 0, 36.9589)
 script = ExtResource("5_3iprb")
 ID = 1
 

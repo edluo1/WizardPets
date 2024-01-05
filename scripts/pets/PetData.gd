@@ -1,4 +1,4 @@
-extends Object
+extends Resource
 # Should be the base class for all pets.
 class_name PetData
 @export var ID: Res.ID = Res.ID.empty

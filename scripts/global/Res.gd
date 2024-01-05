@@ -26,8 +26,11 @@ enum ID
 	sheep,
 	strings,
 	#Items
+	item,#placeholder for items
 	lettuce,
 	meat,
 	honey,
-	trap
+	trap,
+	cattoy,
+	tama
 }

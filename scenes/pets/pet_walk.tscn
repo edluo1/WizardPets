@@ -157,7 +157,7 @@ transform = Transform3D(1, 0, 0, 0, 1.01, 0, 0, 0, 1, 0, 0.25, 0)
 transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, 0, 0, 0)
 flip_h = true
 sprite_frames = ExtResource("2_202dn")
-animation = &"bear_eat"
+animation = &"angel_cry"
 
 [node name="FoodSprite" type="AnimatedSprite3D" parent="Sprite_Base/SpriteHolder"]
 transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, 0.0787662, -0.124156, 0.00203705)

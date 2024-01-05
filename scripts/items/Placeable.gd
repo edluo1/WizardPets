@@ -23,14 +23,14 @@ var can_place: bool = true:
 func _ready():
 	#_setup_shader()
 	add_to_group("placeable")
-	match placeable_item.item_name:
-		"Lettuce":
+	match placeable_item.ID:
+		Res.ID.lettuce:
 			setImage("lettuce")
-		"Meat":
+		Res.ID.meat:
 			setImage("meat")
-		"Honey":
+		Res.ID.honey:
 			setImage("honey")
-		"Pet Trap":
+		Res.ID.trap:
 			setImage("trap_open")
 	
 func _setup_shader() -> void:

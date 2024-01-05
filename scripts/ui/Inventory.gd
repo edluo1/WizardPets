@@ -3,6 +3,7 @@ extends Control
 const SlotClass = preload("res://scripts/ui/Slot.gd")
 @onready var inventory_slots = $InventoryUI/GridContainer
 var holding_item: Item = null
+var heldThing: Res.ID = Res.ID.empty
 
 signal item_selected(item)
 

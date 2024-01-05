@@ -7,6 +7,7 @@
 
 [node name="Item" instance=ExtResource("1_mk638")]
 item_name = "Pet Trap"
+ID = 24
 item_state_sprites = Array[Texture2D]([ExtResource("2_sbfql"), ExtResource("3_wog5i"), ExtResource("4_s2fq3")])
 
 [node name="ItemSprite" parent="." index="0"]

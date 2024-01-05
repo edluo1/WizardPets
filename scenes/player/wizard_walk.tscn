@@ -52,6 +52,8 @@ _data = {
 [node name="Wizard" type="CharacterBody3D" groups=["wizard"]]
 script = ExtResource("1_5kdkn")
 hasBackpack = true
+SPEED = null
+COLLECT_RADIUS = null
 
 [node name="Sprite_Base" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 0, 0)

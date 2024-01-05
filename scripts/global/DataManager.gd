@@ -5,10 +5,15 @@ extends Node
 var has_required_pet = false
 var given_required_pet = false
 
-##pet storage
-var heldPet: PetData
-var bubblePets: Array[PetData]
-var petInventory: Array[PetData]
+##Saved variables
+@export var heldThing: Res.ID = Res.ID.empty
+@export var heldPet: PetData
+@export var bubblePets: Array[PetData]
+@export var petInventory: Array[PetData]
+@export var dayNum: int = 0
+@export var money: int = 0
+@export var timeOfDay: int = 0
+@export var currentScene: String = "Shop"
 
 func putPetInBubble():
 	if bubblePets.size() < 3:
@@ -19,9 +24,16 @@ func putPetInBubble():
 		heldPet = null
 
 func storeHeld():
-	petInventory.append(heldPet)
+	if heldThing > Res.ID.empty && heldThing < Res.ID.item:
+		petInventory.append(heldPet)
+		heldThing = Res.ID.empty
+		heldPet = null
 	for pet in bubblePets:
 		petInventory.append(pet)
-	heldPet = null
 	bubblePets.clear()
 
+func saveData():
+	var ayy = "lmao"
+
+func loadData():
+	var ayy = "lmao"

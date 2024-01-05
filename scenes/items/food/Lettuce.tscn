@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://c2lgqnsytlqda" path="res://assets/items/food/leaf 4.png" id="5_l7ftx"]
 
 [node name="Item" instance=ExtResource("1_xul2l")]
-item_name = "Lettuce"
+ID = 21
 item_state_sprites = Array[Texture2D]([ExtResource("2_im6id"), ExtResource("3_1ys0c"), ExtResource("4_qmjlg"), ExtResource("5_l7ftx")])
 
 [node name="ItemSprite" parent="." index="0"]

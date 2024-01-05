@@ -40,6 +40,7 @@ func _ready():
 	var resource = "res://assets/audio/creatures/"+Res.ID.find_key(data.ID)+".wav"
 	var cry = load("res://assets/audio/creatures/"+Res.ID.find_key(data.ID)+".wav")
 	$AudioStreamPlayer3D.stream = cry
+	changeState(S.waiting)
 
 func _process(delta):
 	var wizard = get_tree().get_nodes_in_group("wizard")[0]
@@ -52,6 +53,7 @@ func _process(delta):
 		S.waiting:
 			if initState:
 				initState = false
+				$Sprite_Base/SpriteHolder/FoodSprite.play("empty")
 				$Sprite_Base/SpriteHolder/PetSprite.play(Res.ID.keys()[data.ID] + "_idle")
 			if data.movement == data.MoveStyle.fly:
 				$Sprite_Base/AnimationPlayer.play("Float")
@@ -69,17 +71,18 @@ func _process(delta):
 						var dist:Vector3 = global_position - item.global_position
 						var attract = false
 						if dist.length_squared() < BAIT_RADIUS * BAIT_RADIUS:
-							match (item as Placeable).placeable_item.item_name:
-								"Lettuce":
+							match (item as Placeable).placeable_item.ID:
+								Res.ID.lettuce:
 									if data.eatsLettuce:
 										attract = true
-								"Meat":
+								Res.ID.meat:
 									if data.eatsMeat:
 										attract = true
-								"Honey":
+								Res.ID.honey:
 									if data.eatsHoney:
 										attract = true
-								"Pet Trap":
+								Res.ID.trap:
+									(item as Placeable).setImage("trap_lure")
 									attract = true
 						if attract:
 							changeState(S.moving)
@@ -127,21 +130,22 @@ func _process(delta):
 						var dist:Vector3 = global_position - item.global_position
 						if dist.length_squared() < 0.2:
 							var purge = false
-							match (item as Placeable).placeable_item.item_name:
-								"Lettuce":
+							match (item as Placeable).placeable_item.ID:
+								Res.ID.lettuce:
 									if data.eatsLettuce:
 										purge = true
 										feedPet(Res.ID.lettuce)
-								"Meat":
+								Res.ID.meat:
 									if data.eatsMeat:
 										purge = true
 										feedPet(Res.ID.meat)
-								"Honey":
+								Res.ID.honey:
 									if data.eatsHoney:
 										purge = true
 										feedPet(Res.ID.honey)
-								"Pet Trap":
+								Res.ID.trap:
 									trapCatch = item
+									(trapCatch as Placeable).setImage("trap_closed")
 									data.adjust_mood(-30)
 									changeState(S.trapped)
 							if purge:
@@ -157,6 +161,10 @@ func _process(delta):
 		S.eating:
 			if initState:
 				initState = false
+				$Sprite_Base/SpriteHolder/FoodSprite.position.x = data.eatX
+				$Sprite_Base/SpriteHolder/FoodSprite.position.y = data.eatY
+				if !$Sprite_Base/SpriteHolder/PetSprite.flip_h:
+					%Sprite_Base/SpriteHolder/FoodSprite.position.x *= -1
 				$Sprite_Base/AnimationPlayer.play("Eating")
 				$Sprite_Base/SpriteHolder/PetSprite.play(Res.ID.keys()[data.ID] + "_eat")
 			countdown -= delta

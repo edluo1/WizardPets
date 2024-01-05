@@ -27,7 +27,7 @@ func _create_placement_preview() -> void:
 	# Instantiate preview scene/sprite without collision and then addd it to the world
 	preview_instance = placeable_scene.instantiate() as Placeable
 	preview_instance.placeable_item = item_to_place
-	print(preview_instance.placeable_item.item_name)
+	print(Res.ID.keys()[preview_instance.placeable_item.ID])
 	world.add_child(preview_instance)
 	preview_instance.previewing = true
 

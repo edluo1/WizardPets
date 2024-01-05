@@ -7,7 +7,7 @@ enum ItemType {
 	CONSUMABLE = 4
 }
 
-@export var item_name: String = ""
+@export var ID: Res.ID = Res.ID.empty
 @export var placeable: bool = true
 @export var throwable: bool = false
 @export var base_item_type: ItemType
